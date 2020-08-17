@@ -8,14 +8,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "380D8335-1D86-41AF-AA50-3E79C7BF337F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "callApiPickupLocations()"
             landmarkType = "7">
          </BreakpointContent>
@@ -24,14 +24,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "44033C63-D0D6-4090-8ABB-D3F2F64BCA9E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "callApiPickupLocations()"
             landmarkType = "7">
          </BreakpointContent>
@@ -49,6 +49,118 @@
             startingLineNumber = "34"
             endingLineNumber = "34"
             landmarkName = "apiPickupLocations(filterId:comp:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E524E0A2-CDA5-4407-A8F9-58AB9FAD781F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "locationManager(_:didChangeAuthorization:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3D9323B-58B1-42E1-AF5C-527E6748F75E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "locationManager(_:didChangeAuthorization:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E354C92-5699-4567-B477-25B64918DBE8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "locationManager(_:didChangeAuthorization:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C69FAB9-388E-4B9D-A37B-42B4BE342B79"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "userAllowedToUseLocation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0C69FAB9-388E-4B9D-A37B-42B4BE342B79 - cd7cb5cd49772e2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoodBitsStore.HomePickupLocViewModel.callApiPickupLocations() -&gt; ()"
+                  moduleName = "GoodBitsStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sukumaranupsukumaran/Desktop/GoodBitsStore/GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "0C69FAB9-388E-4B9D-A37B-42B4BE342B79 - ac8ec69329283e05"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GoodBitsStore.Results&lt;GoodBitsStore.ModelResponse&gt;) -&gt; () in GoodBitsStore.HomePickupLocViewModel.callApiPickupLocations() -&gt; ()"
+                  moduleName = "GoodBitsStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sukumaranupsukumaran/Desktop/GoodBitsStore/GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "67992431-D670-484C-945D-CD690AE0DF8C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "userAllowedToUseLocation()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

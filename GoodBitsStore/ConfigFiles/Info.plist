@@ -65,5 +65,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationUsageDescription</key>
+	<string>Need permission to access your current location to show you the nearest store available.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need permission to access your current location only while using the app, to show you the nearest store available.</string>
 </dict>
 </plist>

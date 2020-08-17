@@ -8,12 +8,14 @@
 
 import UIKit
 
+
 class HomePickUpLocViewController: UIViewController {
     
     
     @IBOutlet weak var locListView: UITableView!
     
     var viewModel: HomePickupLocViewModel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

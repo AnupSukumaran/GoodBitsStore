@@ -11,12 +11,22 @@ import XCTest
 
 class GoodBitsStoreTests: XCTestCase {
 
+    var sut: HomePickupLocViewModel!
+    
     override func setUpWithError() throws {
+        sut = HomePickupLocViewModel()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
+        sut = nil
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+    
+    func testDistanceBtwCoords() {
+        let distance = getDistance(coord1: (lat: 9.981391906738281, long: 76.30953697494819), coord2: (lat: 9.992127, long: 76.301905))
+        
+        XCTAssertEqual(distance, 1452.622540522926)
     }
 
     func testExample() throws {
