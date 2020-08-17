@@ -101,11 +101,10 @@
 			children = (
 				18502C6224EAD39C001385BB /* AppDelegate.swift */,
 				18502C6424EAD39C001385BB /* SceneDelegate.swift */,
-				18502C6624EAD39C001385BB /* ViewController.swift */,
-				18502C6824EAD39C001385BB /* Main.storyboard */,
-				18502C6B24EAD3A1001385BB /* Assets.xcassets */,
-				18502C6D24EAD3A1001385BB /* LaunchScreen.storyboard */,
-				18502C7024EAD3A1001385BB /* Info.plist */,
+				18502C9224EAD539001385BB /* Storyboards */,
+				18502C9524EAD5E0001385BB /* ViewControllers */,
+				18502C9324EAD56E001385BB /* Resources */,
+				18502C9424EAD589001385BB /* ConfigFiles */,
 			);
 			path = GoodBitsStore;
 			sourceTree = "<group>";
@@ -126,6 +125,39 @@
 				18502C8624EAD3A2001385BB /* Info.plist */,
 			);
 			path = GoodBitsStoreUITests;
+			sourceTree = "<group>";
+		};
+		18502C9224EAD539001385BB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				18502C6824EAD39C001385BB /* Main.storyboard */,
+				18502C6D24EAD3A1001385BB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		18502C9324EAD56E001385BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18502C6B24EAD3A1001385BB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		18502C9424EAD589001385BB /* ConfigFiles */ = {
+			isa = PBXGroup;
+			children = (
+				18502C7024EAD3A1001385BB /* Info.plist */,
+			);
+			path = ConfigFiles;
+			sourceTree = "<group>";
+		};
+		18502C9524EAD5E0001385BB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18502C6624EAD39C001385BB /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RDRMVW96A6;
-				INFOPLIST_FILE = GoodBitsStore/Info.plist;
+				INFOPLIST_FILE = GoodBitsStore/ConfigFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,7 +487,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RDRMVW96A6;
-				INFOPLIST_FILE = GoodBitsStore/Info.plist;
+				INFOPLIST_FILE = GoodBitsStore/ConfigFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
