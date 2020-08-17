@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "becd9a729a37bdbef5bc39dc3c702b99f9e3d046",
+          "version": "5.2.2"
+        }
+      },
+      {
+        "package": "APILib",
+        "repositoryURL": "https://github.com/AnupSukumaran/APILib.git",
+        "state": {
+          "branch": null,
+          "revision": "422696dc121edb8cc1fde8bff7b2d9ad28d87b88",
+          "version": "1.1.5"
+        }
+      },
+      {
+        "package": "SASLogger",
+        "repositoryURL": "https://github.com/AnupSukumaran/SASLogger.git",
+        "state": {
+          "branch": null,
+          "revision": "fe9bcfc41b891e90aabf186906e01b977bed1bba",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
