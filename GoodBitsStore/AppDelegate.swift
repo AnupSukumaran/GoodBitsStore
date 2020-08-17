@@ -14,7 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        if let navVC = window?.rootViewController as? UINavigationController {
+            
+            if let vc = navVC.topViewController as? HomePickUpLocViewController {
+                
+                vc.viewModel = HomePickupLocViewModel()
+            } else {
+                
+            }
+            
+        } else {
+            
+        }
+        
         return true
     }
 
