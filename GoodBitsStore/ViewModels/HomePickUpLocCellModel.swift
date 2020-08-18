@@ -13,5 +13,6 @@ class HomePickUpLocCellModel {
     
     init(pickup: Pickup) {
         self.pickup = pickup
+        
     }
 }

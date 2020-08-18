@@ -34,6 +34,7 @@
 		18F168AD24EAE4EE003104FD /* HomePickUpLocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F168AC24EAE4EE003104FD /* HomePickUpLocViewController.swift */; };
 		18F168AF24EAE520003104FD /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F168AE24EAE520003104FD /* NSObject+Ext.swift */; };
 		18F168B124EAE5D7003104FD /* HomePickupLocViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F168B024EAE5D7003104FD /* HomePickupLocViewModel.swift */; };
+		9D43EDA024EBCF2E00ABFE7F /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43ED9F24EBCF2E00ABFE7F /* Double+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		18F168AC24EAE4EE003104FD /* HomePickUpLocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickUpLocViewController.swift; sourceTree = "<group>"; };
 		18F168AE24EAE520003104FD /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
 		18F168B024EAE5D7003104FD /* HomePickupLocViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickupLocViewModel.swift; sourceTree = "<group>"; };
+		9D43ED9F24EBCF2E00ABFE7F /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 				183E4B3724EB729E00394B54 /* SASSuperAlert.swift */,
 				18502CA224EADA6D001385BB /* Constants.swift */,
 				18F168AE24EAE520003104FD /* NSObject+Ext.swift */,
+				9D43ED9F24EBCF2E00ABFE7F /* Double+Ext.swift */,
 			);
 			path = Exts;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				18502C6324EAD39C001385BB /* AppDelegate.swift in Sources */,
 				183E4B3B24EB74E900394B54 /* HomePickUpLocTableViewCell.swift in Sources */,
 				183E4B3824EB729E00394B54 /* SASSuperAlert.swift in Sources */,
+				9D43EDA024EBCF2E00ABFE7F /* Double+Ext.swift in Sources */,
 				18502CA024EAD995001385BB /* APILibrary.swift in Sources */,
 				18502C6524EAD39C001385BB /* SceneDelegate.swift in Sources */,
 				183E4B3D24EB79AF00394B54 /* HomePickUpLocCellModel.swift in Sources */,

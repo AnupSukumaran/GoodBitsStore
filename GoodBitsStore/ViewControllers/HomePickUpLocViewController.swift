@@ -51,5 +51,7 @@ extension HomePickUpLocViewController {
             
             vc.locListView.reloadData()
         }
+        
+       
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import SASLogger
+import CoreLocation
 
 class HomePickUpLocTableViewCell: UITableViewCell {
     
@@ -18,25 +19,34 @@ class HomePickUpLocTableViewCell: UITableViewCell {
     
     var cellModel: HomePickUpLocCellModel? {
         didSet {
-            
-            guard let model = cellModel else {return}
-            lbPickAlias.text = model.pickup.alias ?? ""
-            Logger.p("model.pickup.address2- \(model.pickup.address2 ?? "NO data")")
-            let add2 = (model.pickup.address2 == "") ? "" : (", " + model.pickup.address2!)
-            lbAddress.text = (model.pickup.address1 ?? "") + add2
-            lbCity.text = model.pickup.city ?? ""
+            cellModelConfig()
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var currentLoc: CLLocation? {
+        didSet {
+            getDistancevalue()
+        }
+    }
+    
+    func cellModelConfig() {
+        guard let model = cellModel else {return}
+        lbPickAlias.text = model.pickup.alias ?? ""
+        Logger.p("model.pickup.address2- \(model.pickup.address2 ?? "NO data")")
+        let comma = (model.pickup.address1 == "") ? "" : ", "
+        let add2 = (model.pickup.address2 == "") ? "" : (comma + (model.pickup.address2 ?? ""))
+        lbAddress.text = (model.pickup.address1 ?? "") + add2
+        lbCity.text = model.pickup.city ?? ""
+    }
+    
+    func getDistancevalue() {
+        guard let d = currentLoc else {lbKm.isHidden = true;return}
+        lbKm.isHidden = false
+        guard let lat = cellModel?.pickup.latitude , let long = cellModel?.pickup.longitude else {return}
+        let distance = getDistance(coord1: (lat: d.coordinate.latitude, long: d.coordinate.longitude), coord2: (lat: lat, long: long)).toDecimalsStr(2)
+        lbKm.text = distance + "km"
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
 
 }
