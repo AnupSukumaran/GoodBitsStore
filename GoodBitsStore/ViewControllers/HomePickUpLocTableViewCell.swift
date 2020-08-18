@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SASLogger
 
 class HomePickUpLocTableViewCell: UITableViewCell {
     
@@ -19,8 +20,10 @@ class HomePickUpLocTableViewCell: UITableViewCell {
         didSet {
             
             guard let model = cellModel else {return}
-            lbPickAlias.text = model.pickup.alias ?? "-"
-            lbAddress.text = (model.pickup.address1 ?? "") + "\n" + (model.pickup.address2 ?? "")
+            lbPickAlias.text = model.pickup.alias ?? ""
+            Logger.p("model.pickup.address2- \(model.pickup.address2 ?? "NO data")")
+            let add2 = (model.pickup.address2 == "") ? "" : (", " + model.pickup.address2!)
+            lbAddress.text = (model.pickup.address1 ?? "") + add2
             lbCity.text = model.pickup.city ?? ""
         }
     }

@@ -25,7 +25,7 @@ class HomePickUpLocViewController: UIViewController {
         super.viewDidLoad()
         locListView.dataSource = viewModel
         locListView.delegate = viewModel
-        locListView.estimatedRowHeight = 50
+        locListView.estimatedRowHeight = 110
         locListView.rowHeight = UITableView.automaticDimension
         viewModel?.callApiPickupLocations()
     }
