@@ -9,14 +9,9 @@
 import UIKit
 
 class HomePickUpLocCellModel {
-
-    var pickAlias: String
-    var address: String
-    var city: String
+    var pickup: Pickup
     
-    init(pickAlias: String, address: String, city:String) {
-        self.pickAlias = pickAlias
-        self.address = address
-        self.city = city
+    init(pickup: Pickup) {
+        self.pickup = pickup
     }
 }

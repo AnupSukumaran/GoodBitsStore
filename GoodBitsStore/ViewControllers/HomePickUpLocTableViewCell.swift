@@ -13,6 +13,17 @@ class HomePickUpLocTableViewCell: UITableViewCell {
     @IBOutlet weak var lbPickAlias: UILabel!
     @IBOutlet weak var lbAddress: UILabel!
     @IBOutlet weak var lbCity: UILabel!
+    @IBOutlet weak var lbKm: UILabel!
+    
+    var cellModel: HomePickUpLocCellModel? {
+        didSet {
+            
+            guard let model = cellModel else {return}
+            lbPickAlias.text = model.pickup.alias ?? "-"
+            lbAddress.text = (model.pickup.address1 ?? "") + "\n" + (model.pickup.address2 ?? "")
+            lbCity.text = model.pickup.city ?? ""
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -15,14 +15,19 @@ class HomePickUpLocViewController: UIViewController {
     @IBOutlet weak var locListView: UITableView!
     @IBOutlet weak var locationBtn: UIButton!
     
-    var viewModel: HomePickupLocViewModel!
+    var viewModel: HomePickupLocViewModel? {
+        didSet {
+            setHandlers()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         locListView.dataSource = viewModel
         locListView.delegate = viewModel
-        
-        viewModel.callApiPickupLocations()
+        locListView.estimatedRowHeight = 50
+        locListView.rowHeight = UITableView.automaticDimension
+        viewModel?.callApiPickupLocations()
     }
     
     
@@ -32,4 +37,16 @@ class HomePickUpLocViewController: UIViewController {
         locationBtn.setImage(btnImage, for: .normal)
     }
     
+}
+
+
+extension HomePickUpLocViewController {
+    
+    func setHandlers() {
+        viewModel?.tableReloadHandler = { [weak self] in
+            guard let vc = self else {return}
+            
+            vc.locListView.reloadData()
+        }
+    }
 }

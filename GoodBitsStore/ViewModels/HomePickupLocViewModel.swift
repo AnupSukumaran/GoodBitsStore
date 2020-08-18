@@ -61,8 +61,12 @@ extension HomePickupLocViewModel {
             case.success(let data):
                 self.pickupLocationsModel = data.pickupLocationsModel
                 if let pickUps = data.pickupLocationsModel?.pickup {
+                    
                     self.pickUps = pickUps.filter{$0.active == true}
+                    Logger.p("pickUps = \(pickUps.count)")
                     self.tableReloadHandler?()
+                } else {
+                    
                 }
                 
             case.failure(errorStr: let errStr) :
@@ -76,10 +80,14 @@ extension HomePickupLocViewModel {
 
 extension HomePickupLocViewModel: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pickupLocationsModel?.pickup?.count ?? 0
+        return pickUps.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: HomePickUpLocTableViewCell.identifier, for: indexPath) as? HomePickUpLocTableViewCell {
+            cell.cellModel = HomePickUpLocCellModel(pickup: pickUps[indexPath.row])
+            return cell
+        }
         return UITableViewCell()
     }
 
