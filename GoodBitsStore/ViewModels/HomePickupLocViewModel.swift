@@ -18,39 +18,38 @@ class HomePickupLocViewModel: NSObject {
     var pickUps = [Pickup]()
     var tableReloadHandler: (() -> ())?
     
-    override init() {
-        
-        super.init()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        
-        //userAllowedToUseLocation()
-    }
+    override init() {}
     
 }
 
 extension HomePickupLocViewModel {
     
-    func userAllowedToUseLocation() {
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
+    func requestLocationAutorization() {
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+    }
+    
+    func checkUserAutorizedLocation(startLocating: Bool) {
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
         CLLocationManager.authorizationStatus() == .authorizedAlways) {
-           currentLoc = locationManager.location
+            
+            guard startLocating else {
+                locationManager.stopUpdatingLocation()
+                return
+            }
+        
+            locationManager.startUpdatingLocation()
+            currentLoc = locationManager.location
             let lat = currentLoc?.coordinate.latitude ?? 0.0
             let long = currentLoc?.coordinate.longitude ?? 0.0
             
             Logger.p("SASlat = \(lat)")
             Logger.p("SASlong = \(long)")
-            //9.981391906738281, 76.30953697494819
-            //9.992127, 76.301905
             
-            let stopPoint = CLLocation(latitude: 9.992127, longitude: 76.301905)
-            //let distance = currentLoc!.distance(from: stopPoint)
-            let distance = getDistance(coord1: (lat: 9.981391906738281, long: 76.30953697494819), coord2: (lat: 9.992127, long: 76.301905))
-            Logger.p("SASdistance = \(distance)") // 1449.0911580976506
         } else {
             
+            requestLocationAutorization()
         }
     }
     
@@ -100,10 +99,8 @@ extension HomePickupLocViewModel: CLLocationManagerDelegate {
         
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
-            
-            userAllowedToUseLocation()
-    
-       
+            checkUserAutorizedLocation(startLocating: true)
+        
         default:
             
             break

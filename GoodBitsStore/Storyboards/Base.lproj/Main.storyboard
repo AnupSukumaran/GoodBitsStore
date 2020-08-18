@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" title="GBits Store" id="xLI-e5-GXB">
                         <barButtonItem key="rightBarButtonItem" id="wCG-Ra-rD5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zVI-Fr-HeQ">
-                                <rect key="frame" x="316" y="10" width="78" height="24"/>
+                                <rect key="frame" x="316" y="10" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.42324472283070408" green="0.070997297806654119" blue="0.67084277849740936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="locOn">

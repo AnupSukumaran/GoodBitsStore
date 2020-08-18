@@ -27,6 +27,8 @@ class HomePickUpLocViewController: UIViewController {
         locListView.delegate = viewModel
         locListView.estimatedRowHeight = 110
         locListView.rowHeight = UITableView.automaticDimension
+        locationBtn.isSelected = false
+
         viewModel?.callApiPickupLocations()
     }
     
@@ -35,6 +37,7 @@ class HomePickUpLocViewController: UIViewController {
         sender.isSelected = !sender.isSelected
         let btnImage = sender.isSelected ? UIImage(named: "locOff") : UIImage(named: "locOn")
         locationBtn.setImage(btnImage, for: .normal)
+        viewModel?.checkUserAutorizedLocation(startLocating: sender.isSelected)
     }
     
 }
