@@ -37,6 +37,12 @@ class HomePickUpLocTableViewCell: UITableViewCell {
         let add2 = (model.pickup.address2 == "") ? "" : (comma + (model.pickup.address2 ?? ""))
         lbAddress.text = (model.pickup.address1 ?? "") + add2
         lbCity.text = model.pickup.city ?? ""
+        if let d = model.pickup.distance {
+            lbKm.isHidden = false
+            lbKm.text = d.toDecimalsStr(2) + " km"
+        } else {
+            lbKm.isHidden = true
+        }
     }
     
     func getDistancevalue() {

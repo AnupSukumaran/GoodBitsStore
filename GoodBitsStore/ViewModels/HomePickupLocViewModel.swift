@@ -16,7 +16,7 @@ class HomePickupLocViewModel: NSObject {
     var currentLoc: CLLocation?
     var pickupLocationsModel:PickupLocationsModel?
     var pickUps = [Pickup]()
-    var sortedPickUps = [Pickup]()
+    var sortedDistancePickUps = [Pickup]()
     var tableReloadHandler: (() -> ())?
     
     override init() {}
@@ -41,14 +41,37 @@ extension HomePickupLocViewModel {
                 self.tableReloadHandler?()
                 return
             }
+            
+            
         
             locationManager.startUpdatingLocation()
             currentLoc = locationManager.location
-            let lat = currentLoc?.coordinate.latitude ?? 0.0
-            let long = currentLoc?.coordinate.longitude ?? 0.0
+            let currLat = currentLoc?.coordinate.latitude ?? 0.0
+            let currLong = currentLoc?.coordinate.longitude ?? 0.0
             
-            Logger.p("SASlat = \(lat)")
-            Logger.p("SASlong = \(long)")
+        
+            
+            let newPickUp = pickUps.map { (pickUp) -> Pickup in
+                var newPickUp = pickUp
+                if let lat = newPickUp.latitude , let long = newPickUp.longitude {
+                    let distance = getDistance(coord1: (lat: currLat, long: currLong), coord2: (lat: lat, long: long))
+                    Logger.p("ss.Distance1 = \(distance)")
+                    newPickUp.distance = distance
+                }
+                
+
+               return newPickUp
+            }
+            
+            sortedDistancePickUps = newPickUp.sorted { (x, y) -> Bool in
+                guard let xd = x.distance, let yd = y.distance else {return false}
+                return xd < yd
+            }
+            
+            Logger.p("ss.Distance2 = \(sortedDistancePickUps.map{$0.distance})")
+            
+            Logger.p("SASlat = \(currLat)")
+            Logger.p("SASlong = \(currLong)")
             self.tableReloadHandler?()
             
         } else {
@@ -90,14 +113,14 @@ extension HomePickupLocViewModel {
 
 extension HomePickupLocViewModel: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pickUps.count
+        return currentLoc == nil ? pickUps.count : sortedDistancePickUps.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: HomePickUpLocTableViewCell.identifier, for: indexPath) as? HomePickUpLocTableViewCell {
             
-            cell.cellModel = HomePickUpLocCellModel(pickup: pickUps[indexPath.row])
-            cell.currentLoc = currentLoc
+            cell.cellModel = HomePickUpLocCellModel(pickup: currentLoc == nil ? pickUps[indexPath.row] : sortedDistancePickUps[indexPath.row])
+            //cell.currentLoc = currentLoc
             cell.layoutIfNeeded()
             return cell
         }

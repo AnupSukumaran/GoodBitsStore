@@ -49,7 +49,8 @@ struct Pickup : Codable {
 	let hours : [String]?
 	let images : Images?
 	let is_default_location : Bool?
-
+    var distance: Double? = nil
+    
 	enum CodingKeys: String, CodingKey {
 
 		case feature = "feature"
