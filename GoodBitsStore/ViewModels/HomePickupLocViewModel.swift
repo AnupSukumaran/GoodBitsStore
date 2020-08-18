@@ -16,6 +16,7 @@ class HomePickupLocViewModel: NSObject {
     var currentLoc: CLLocation?
     var pickupLocationsModel:PickupLocationsModel?
     var pickUps = [Pickup]()
+    var sortedPickUps = [Pickup]()
     var tableReloadHandler: (() -> ())?
     
     override init() {}
@@ -51,7 +52,6 @@ extension HomePickupLocViewModel {
             self.tableReloadHandler?()
             
         } else {
-            
             requestLocationAutorization()
         }
     }
