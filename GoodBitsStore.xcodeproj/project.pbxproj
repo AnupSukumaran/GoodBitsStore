@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1811D5C724EC3EAF0056FCC8 /* APILib in Frameworks */ = {isa = PBXBuildFile; productRef = 1811D5C624EC3EAF0056FCC8 /* APILib */; };
+		1811D5C724EC3EAF0056FCC8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1811D5C624EC3EAF0056FCC8 /* SwiftPackageProductDependency */; };
 		183E4B3824EB729E00394B54 /* SASSuperAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3724EB729E00394B54 /* SASSuperAlert.swift */; };
 		183E4B3B24EB74E900394B54 /* HomePickUpLocTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3A24EB74E900394B54 /* HomePickUpLocTableViewCell.swift */; };
 		183E4B3D24EB79AF00394B54 /* HomePickUpLocCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3C24EB79AF00394B54 /* HomePickUpLocCellModel.swift */; };
@@ -18,12 +18,12 @@
 		18502C6F24EAD3A1001385BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18502C6D24EAD3A1001385BB /* LaunchScreen.storyboard */; };
 		18502C7A24EAD3A2001385BB /* GoodBitsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C7924EAD3A2001385BB /* GoodBitsStoreTests.swift */; };
 		18502C8524EAD3A2001385BB /* GoodBitsStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C8424EAD3A2001385BB /* GoodBitsStoreUITests.swift */; };
-		18502C9824EAD713001385BB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18502C9724EAD713001385BB /* Alamofire */; };
+		18502C9824EAD713001385BB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 18502C9724EAD713001385BB /* SwiftPackageProductDependency */; };
 		18502CA024EAD995001385BB /* APILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C9F24EAD995001385BB /* APILibrary.swift */; };
 		18502CA324EADA6D001385BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502CA224EADA6D001385BB /* Constants.swift */; };
 		18502CA724EADE03001385BB /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502CA624EADE03001385BB /* Results.swift */; };
 		18502CAA24EADE3E001385BB /* ModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502CA924EADE3E001385BB /* ModelResponse.swift */; };
-		18502CAD24EADE91001385BB /* SASLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 18502CAC24EADE91001385BB /* SASLogger */; };
+		18502CAD24EADE91001385BB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 18502CAC24EADE91001385BB /* SwiftPackageProductDependency */; };
 		1866312624EC2006005F83B5 /* APILibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866312524EC2006005F83B5 /* APILibraryTests.swift */; };
 		18F1689F24EAE3E6003104FD /* PickupLocationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1689E24EAE3E6003104FD /* PickupLocationsModel.swift */; };
 		18F168A624EAE402003104FD /* Primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F168A024EAE402003104FD /* Primary.swift */; };
@@ -35,6 +35,9 @@
 		18F168AD24EAE4EE003104FD /* HomePickUpLocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F168AC24EAE4EE003104FD /* HomePickUpLocViewController.swift */; };
 		18F168AF24EAE520003104FD /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F168AE24EAE520003104FD /* NSObject+Ext.swift */; };
 		18F168B124EAE5D7003104FD /* HomePickupLocViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F168B024EAE5D7003104FD /* HomePickupLocViewModel.swift */; };
+		57DD732B045CA5BA3E0D4331 /* Pods_GoodBitsStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89615FB885D64C1DA2443935 /* Pods_GoodBitsStoreTests.framework */; };
+		795480B0F89F1B6F085E6D47 /* Pods_GoodBitsStore_GoodBitsStoreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244ADEEB2733CDCAD953964A /* Pods_GoodBitsStore_GoodBitsStoreUITests.framework */; };
+		98273FB5A30869EA1EDD750F /* Pods_GoodBitsStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B564BAB03F5195D9BB8807 /* Pods_GoodBitsStore.framework */; };
 		9D43EDA024EBCF2E00ABFE7F /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43ED9F24EBCF2E00ABFE7F /* Double+Ext.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B1667480FAB6BB90147E0D2 /* Pods-GoodBitsStore-GoodBitsStoreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBitsStore-GoodBitsStoreUITests.release.xcconfig"; path = "Target Support Files/Pods-GoodBitsStore-GoodBitsStoreUITests/Pods-GoodBitsStore-GoodBitsStoreUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1811D5C424EC3E8F0056FCC8 /* APILib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = APILib; path = ../Frameworks_and_packages/APILib; sourceTree = "<group>"; };
 		183E4B3724EB729E00394B54 /* SASSuperAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASSuperAlert.swift; sourceTree = "<group>"; };
 		183E4B3A24EB74E900394B54 /* HomePickUpLocTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickUpLocTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,7 +92,15 @@
 		18F168AC24EAE4EE003104FD /* HomePickUpLocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickUpLocViewController.swift; sourceTree = "<group>"; };
 		18F168AE24EAE520003104FD /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
 		18F168B024EAE5D7003104FD /* HomePickupLocViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickupLocViewModel.swift; sourceTree = "<group>"; };
+		244ADEEB2733CDCAD953964A /* Pods_GoodBitsStore_GoodBitsStoreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodBitsStore_GoodBitsStoreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B564BAB03F5195D9BB8807 /* Pods_GoodBitsStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodBitsStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBADD5272BF08810CDDBF3E /* Pods-GoodBitsStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBitsStore.release.xcconfig"; path = "Target Support Files/Pods-GoodBitsStore/Pods-GoodBitsStore.release.xcconfig"; sourceTree = "<group>"; };
+		89615FB885D64C1DA2443935 /* Pods_GoodBitsStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodBitsStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ABBF1A390877B9768A3C54B /* Pods-GoodBitsStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBitsStore.debug.xcconfig"; path = "Target Support Files/Pods-GoodBitsStore/Pods-GoodBitsStore.debug.xcconfig"; sourceTree = "<group>"; };
+		9C54E369006F5B089B02F207 /* Pods-GoodBitsStore-GoodBitsStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBitsStore-GoodBitsStoreUITests.debug.xcconfig"; path = "Target Support Files/Pods-GoodBitsStore-GoodBitsStoreUITests/Pods-GoodBitsStore-GoodBitsStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D43ED9F24EBCF2E00ABFE7F /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
+		BB555625ECA3DA8A0FA570C9 /* Pods-GoodBitsStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBitsStoreTests.debug.xcconfig"; path = "Target Support Files/Pods-GoodBitsStoreTests/Pods-GoodBitsStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9D0DFA2AD036612B8C4A197 /* Pods-GoodBitsStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBitsStoreTests.release.xcconfig"; path = "Target Support Files/Pods-GoodBitsStoreTests/Pods-GoodBitsStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +108,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18502C9824EAD713001385BB /* Alamofire in Frameworks */,
-				1811D5C724EC3EAF0056FCC8 /* APILib in Frameworks */,
-				18502CAD24EADE91001385BB /* SASLogger in Frameworks */,
+				18502C9824EAD713001385BB /* BuildFile in Frameworks */,
+				1811D5C724EC3EAF0056FCC8 /* BuildFile in Frameworks */,
+				18502CAD24EADE91001385BB /* BuildFile in Frameworks */,
+				98273FB5A30869EA1EDD750F /* Pods_GoodBitsStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57DD732B045CA5BA3E0D4331 /* Pods_GoodBitsStoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,15 +127,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				795480B0F89F1B6F085E6D47 /* Pods_GoodBitsStore_GoodBitsStoreUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11FF302A2F0B50F903279D8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8ABBF1A390877B9768A3C54B /* Pods-GoodBitsStore.debug.xcconfig */,
+				4EBADD5272BF08810CDDBF3E /* Pods-GoodBitsStore.release.xcconfig */,
+				9C54E369006F5B089B02F207 /* Pods-GoodBitsStore-GoodBitsStoreUITests.debug.xcconfig */,
+				0B1667480FAB6BB90147E0D2 /* Pods-GoodBitsStore-GoodBitsStoreUITests.release.xcconfig */,
+				BB555625ECA3DA8A0FA570C9 /* Pods-GoodBitsStoreTests.debug.xcconfig */,
+				D9D0DFA2AD036612B8C4A197 /* Pods-GoodBitsStoreTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1811D5C524EC3EAF0056FCC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33B564BAB03F5195D9BB8807 /* Pods_GoodBitsStore.framework */,
+				244ADEEB2733CDCAD953964A /* Pods_GoodBitsStore_GoodBitsStoreUITests.framework */,
+				89615FB885D64C1DA2443935 /* Pods_GoodBitsStoreTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,6 +176,7 @@
 				18502C8324EAD3A2001385BB /* GoodBitsStoreUITests */,
 				18502C6024EAD39C001385BB /* Products */,
 				1811D5C524EC3EAF0056FCC8 /* Frameworks */,
+				11FF302A2F0B50F903279D8B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,9 +310,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18502C8924EAD3A2001385BB /* Build configuration list for PBXNativeTarget "GoodBitsStore" */;
 			buildPhases = (
+				AD2E3DB734D9BD42F71AEABF /* [CP] Check Pods Manifest.lock */,
 				18502C5B24EAD39C001385BB /* Sources */,
 				18502C5C24EAD39C001385BB /* Frameworks */,
 				18502C5D24EAD39C001385BB /* Resources */,
+				3B9A8D1129AFB6B0CA15EB59 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,9 +322,9 @@
 			);
 			name = GoodBitsStore;
 			packageProductDependencies = (
-				18502C9724EAD713001385BB /* Alamofire */,
-				18502CAC24EADE91001385BB /* SASLogger */,
-				1811D5C624EC3EAF0056FCC8 /* APILib */,
+				18502C9724EAD713001385BB /* SwiftPackageProductDependency */,
+				18502CAC24EADE91001385BB /* SwiftPackageProductDependency */,
+				1811D5C624EC3EAF0056FCC8 /* SwiftPackageProductDependency */,
 			);
 			productName = GoodBitsStore;
 			productReference = 18502C5F24EAD39C001385BB /* GoodBitsStore.app */;
@@ -299,6 +334,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18502C8C24EAD3A2001385BB /* Build configuration list for PBXNativeTarget "GoodBitsStoreTests" */;
 			buildPhases = (
+				BF2542AE14F9FC116BEE1AB0 /* [CP] Check Pods Manifest.lock */,
 				18502C7124EAD3A2001385BB /* Sources */,
 				18502C7224EAD3A2001385BB /* Frameworks */,
 				18502C7324EAD3A2001385BB /* Resources */,
@@ -317,9 +353,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18502C8F24EAD3A2001385BB /* Build configuration list for PBXNativeTarget "GoodBitsStoreUITests" */;
 			buildPhases = (
+				E325573B297B4867DB4BDE81 /* [CP] Check Pods Manifest.lock */,
 				18502C7C24EAD3A2001385BB /* Sources */,
 				18502C7D24EAD3A2001385BB /* Frameworks */,
 				18502C7E24EAD3A2001385BB /* Resources */,
+				92A5F8E732FFA33BFC6EF5A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,8 +402,8 @@
 			);
 			mainGroup = 18502C5624EAD39C001385BB;
 			packageReferences = (
-				18502C9624EAD713001385BB /* XCRemoteSwiftPackageReference "Alamofire" */,
-				18502CAB24EADE91001385BB /* XCRemoteSwiftPackageReference "SASLogger" */,
+				18502C9624EAD713001385BB /* RemoteSwiftPackageReference */,
+				18502CAB24EADE91001385BB /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 18502C6024EAD39C001385BB /* Products */;
 			projectDirPath = "";
@@ -404,6 +442,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B9A8D1129AFB6B0CA15EB59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodBitsStore/Pods-GoodBitsStore-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodBitsStore/Pods-GoodBitsStore-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodBitsStore/Pods-GoodBitsStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92A5F8E732FFA33BFC6EF5A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodBitsStore-GoodBitsStoreUITests/Pods-GoodBitsStore-GoodBitsStoreUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodBitsStore-GoodBitsStoreUITests/Pods-GoodBitsStore-GoodBitsStoreUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodBitsStore-GoodBitsStoreUITests/Pods-GoodBitsStore-GoodBitsStoreUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD2E3DB734D9BD42F71AEABF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoodBitsStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF2542AE14F9FC116BEE1AB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoodBitsStoreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E325573B297B4867DB4BDE81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoodBitsStore-GoodBitsStoreUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18502C5B24EAD39C001385BB /* Sources */ = {
@@ -601,6 +742,7 @@
 		};
 		18502C8A24EAD3A2001385BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ABBF1A390877B9768A3C54B /* Pods-GoodBitsStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -620,6 +762,7 @@
 		};
 		18502C8B24EAD3A2001385BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EBADD5272BF08810CDDBF3E /* Pods-GoodBitsStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -639,6 +782,7 @@
 		};
 		18502C8D24EAD3A2001385BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB555625ECA3DA8A0FA570C9 /* Pods-GoodBitsStoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -661,6 +805,7 @@
 		};
 		18502C8E24EAD3A2001385BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9D0DFA2AD036612B8C4A197 /* Pods-GoodBitsStoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -683,6 +828,7 @@
 		};
 		18502C9024EAD3A2001385BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C54E369006F5B089B02F207 /* Pods-GoodBitsStore-GoodBitsStoreUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -703,6 +849,7 @@
 		};
 		18502C9124EAD3A2001385BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B1667480FAB6BB90147E0D2 /* Pods-GoodBitsStore-GoodBitsStoreUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -763,7 +910,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		18502C9624EAD713001385BB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		18502C9624EAD713001385BB /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -771,7 +918,7 @@
 				minimumVersion = 5.2.2;
 			};
 		};
-		18502CAB24EADE91001385BB /* XCRemoteSwiftPackageReference "SASLogger" */ = {
+		18502CAB24EADE91001385BB /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AnupSukumaran/SASLogger.git";
 			requirement = {
@@ -782,18 +929,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1811D5C624EC3EAF0056FCC8 /* APILib */ = {
+		1811D5C624EC3EAF0056FCC8 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = APILib;
 		};
-		18502C9724EAD713001385BB /* Alamofire */ = {
+		18502C9724EAD713001385BB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18502C9624EAD713001385BB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 18502C9624EAD713001385BB /* RemoteSwiftPackageReference */;
 			productName = Alamofire;
 		};
-		18502CAC24EADE91001385BB /* SASLogger */ = {
+		18502CAC24EADE91001385BB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18502CAB24EADE91001385BB /* XCRemoteSwiftPackageReference "SASLogger" */;
+			package = 18502CAB24EADE91001385BB /* RemoteSwiftPackageReference */;
 			productName = SASLogger;
 		};
 /* End XCSwiftPackageProductDependency section */

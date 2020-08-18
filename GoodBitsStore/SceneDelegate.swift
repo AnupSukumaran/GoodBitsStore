@@ -16,16 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let navVC = window?.rootViewController as? UINavigationController {
-            
             if let vc = navVC.topViewController as? HomePickUpLocViewController {
-                
-                vc.viewModel = HomePickupLocViewModel()
-            } else {
-                
+                vc.viewModel = HomePickupLocViewModel(loader: Const.loader(vc))
             }
-            
-        } else {
-            
         }
         guard let _ = (scene as? UIWindowScene) else { return }
     }

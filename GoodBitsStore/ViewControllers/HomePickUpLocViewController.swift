@@ -15,6 +15,7 @@ class HomePickUpLocViewController: UIViewController {
     @IBOutlet weak var locListView: UITableView!
     @IBOutlet weak var locationBtn: UIButton!
     
+    
     var viewModel: HomePickupLocViewModel? {
         didSet {
             setHandlers()

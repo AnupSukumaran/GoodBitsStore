@@ -19,13 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             if let vc = navVC.topViewController as? HomePickUpLocViewController {
                 
-                vc.viewModel = HomePickupLocViewModel()
-            } else {
-                
+                vc.viewModel = HomePickupLocViewModel(loader: Const.loader(vc))
             }
-            
-        } else {
-            
         }
         
         return true

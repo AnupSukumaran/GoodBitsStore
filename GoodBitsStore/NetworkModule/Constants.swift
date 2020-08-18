@@ -7,6 +7,14 @@
 //
 
 import Foundation
+import SASLoaderPod
+
+class Const {
+    static let loader: (UIViewController) -> (LoaderView) = { (vc) in
+        return LoaderView(callOn: vc, type: ., color: .black, padding: 18)
+    }
+    
+}
 
 extension String {
     static var appName = "GoodBits Store"
@@ -21,4 +29,8 @@ extension String {
     static let kContentType = "Content-Type"
     
     static let vAppJson = "application/json"
+    
+    
 }
+
+

@@ -9,6 +9,7 @@
 import UIKit
 import SASLogger
 import CoreLocation
+import SASLoaderPod
 
 class HomePickupLocViewModel: NSObject {
     
@@ -20,8 +21,13 @@ class HomePickupLocViewModel: NSObject {
     var tableReloadHandler: (() -> ())?
 
     let refreshControl = UIRefreshControl()
+    var loader: LoaderView!
     
     override init() {}
+    
+    init(loader: LoaderView) {
+        self.loader = loader
+    }
     
 }
 
@@ -98,8 +104,10 @@ extension HomePickupLocViewModel {
     }
     
     func callApiPickupLocations() {
-        
+        loader.startAnimating()
         APILibrary.shared.apiPickupLocations(filterId: "1") { (response) in
+            self.loader.stopAnimating()
+            
             switch response {
             case.success(let data):
                 self.pickupLocationsModel = data.pickupLocationsModel
