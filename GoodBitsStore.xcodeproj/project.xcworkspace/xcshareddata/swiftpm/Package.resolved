@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "APILib",
-        "repositoryURL": "https://github.com/AnupSukumaran/APILib.git",
-        "state": {
-          "branch": null,
-          "revision": "422696dc121edb8cc1fde8bff7b2d9ad28d87b88",
-          "version": "1.1.5"
-        }
-      },
-      {
         "package": "SASLogger",
         "repositoryURL": "https://github.com/AnupSukumaran/SASLogger.git",
         "state": {

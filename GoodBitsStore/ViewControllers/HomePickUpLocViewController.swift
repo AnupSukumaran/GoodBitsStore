@@ -27,8 +27,11 @@ class HomePickUpLocViewController: UIViewController {
         locListView.delegate = viewModel
         locListView.estimatedRowHeight = 110
         locListView.rowHeight = UITableView.automaticDimension
+        
+        viewModel?.setUpRefreshController()
+        locListView.refreshControl = viewModel?.refreshControl
         locationBtn.isSelected = false
-
+        
         viewModel?.callApiPickupLocations()
     }
     
@@ -51,7 +54,6 @@ extension HomePickUpLocViewController {
             
             vc.locListView.reloadData()
         }
-        
        
     }
 }

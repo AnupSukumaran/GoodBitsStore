@@ -91,10 +91,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="GBits Store" id="xLI-e5-GXB">
                         <barButtonItem key="rightBarButtonItem" id="wCG-Ra-rD5">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zVI-Fr-HeQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zVI-Fr-HeQ">
                                 <rect key="frame" x="266" y="0.0" width="128" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.42324472283070408" green="0.070997297806654119" blue="0.67084277849740936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal" image="locOn">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>

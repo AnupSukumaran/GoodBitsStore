@@ -7,160 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "380D8335-1D86-41AF-AA50-3E79C7BF337F"
+            uuid = "CCC49EE2-A8B2-43F6-8E84-A8540AA878DF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
+            filePath = "GoodBitsStore/ViewModels/HomePickupLocViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "callApiPickupLocations()"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "refreshData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "44033C63-D0D6-4090-8ABB-D3F2F64BCA9E"
+            uuid = "60C06048-F0A9-4784-8EEA-322A1B0F7218"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
+            filePath = "GoodBitsStore/ViewModels/HomePickupLocViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "callApiPickupLocations()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AF2FA280-3805-43D4-8AEC-9E101C64FFD3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodBitsStore/NetworkModule/APILibrary.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "apiPickupLocations(filterId:comp:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E524E0A2-CDA5-4407-A8F9-58AB9FAD781F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "locationManager(_:didChangeAuthorization:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E3D9323B-58B1-42E1-AF5C-527E6748F75E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "locationManager(_:didChangeAuthorization:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6E354C92-5699-4567-B477-25B64918DBE8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "locationManager(_:didChangeAuthorization:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0C69FAB9-388E-4B9D-A37B-42B4BE342B79"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "userAllowedToUseLocation()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0C69FAB9-388E-4B9D-A37B-42B4BE342B79 - cd7cb5cd49772e2"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GoodBitsStore.HomePickupLocViewModel.callApiPickupLocations() -&gt; ()"
-                  moduleName = "GoodBitsStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sukumaranupsukumaran/Desktop/GoodBitsStore/GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "0C69FAB9-388E-4B9D-A37B-42B4BE342B79 - ac8ec69329283e05"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (GoodBitsStore.Results&lt;GoodBitsStore.ModelResponse&gt;) -&gt; () in GoodBitsStore.HomePickupLocViewModel.callApiPickupLocations() -&gt; ()"
-                  moduleName = "GoodBitsStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sukumaranupsukumaran/Desktop/GoodBitsStore/GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "220">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "67992431-D670-484C-945D-CD690AE0DF8C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "userAllowedToUseLocation()"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "setUpRefreshController()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

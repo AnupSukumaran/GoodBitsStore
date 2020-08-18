@@ -34,8 +34,8 @@ class APILibraryTests: XCTestCase {
             case .success(let data):
                 XCTAssertNotNil(data.pickupLocationsModel)
                 
-            case .failure(errorStr: _):
-               break
+            case .failure(errorStr: let error):
+                XCTFail(error.errorStr)
             }
         }
         

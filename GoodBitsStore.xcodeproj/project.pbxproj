@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1811D5C724EC3EAF0056FCC8 /* APILib in Frameworks */ = {isa = PBXBuildFile; productRef = 1811D5C624EC3EAF0056FCC8 /* APILib */; };
 		183E4B3824EB729E00394B54 /* SASSuperAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3724EB729E00394B54 /* SASSuperAlert.swift */; };
 		183E4B3B24EB74E900394B54 /* HomePickUpLocTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3A24EB74E900394B54 /* HomePickUpLocTableViewCell.swift */; };
 		183E4B3D24EB79AF00394B54 /* HomePickUpLocCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3C24EB79AF00394B54 /* HomePickUpLocCellModel.swift */; };
@@ -18,7 +19,6 @@
 		18502C7A24EAD3A2001385BB /* GoodBitsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C7924EAD3A2001385BB /* GoodBitsStoreTests.swift */; };
 		18502C8524EAD3A2001385BB /* GoodBitsStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C8424EAD3A2001385BB /* GoodBitsStoreUITests.swift */; };
 		18502C9824EAD713001385BB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18502C9724EAD713001385BB /* Alamofire */; };
-		18502C9B24EAD73A001385BB /* APILib in Frameworks */ = {isa = PBXBuildFile; productRef = 18502C9A24EAD73A001385BB /* APILib */; };
 		18502CA024EAD995001385BB /* APILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C9F24EAD995001385BB /* APILibrary.swift */; };
 		18502CA324EADA6D001385BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502CA224EADA6D001385BB /* Constants.swift */; };
 		18502CA724EADE03001385BB /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502CA624EADE03001385BB /* Results.swift */; };
@@ -56,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1811D5C424EC3E8F0056FCC8 /* APILib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = APILib; path = ../Frameworks_and_packages/APILib; sourceTree = "<group>"; };
 		183E4B3724EB729E00394B54 /* SASSuperAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASSuperAlert.swift; sourceTree = "<group>"; };
 		183E4B3A24EB74E900394B54 /* HomePickUpLocTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickUpLocTableViewCell.swift; sourceTree = "<group>"; };
 		183E4B3C24EB79AF00394B54 /* HomePickUpLocCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickUpLocCellModel.swift; sourceTree = "<group>"; };
@@ -96,8 +97,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18502C9824EAD713001385BB /* Alamofire in Frameworks */,
+				1811D5C724EC3EAF0056FCC8 /* APILib in Frameworks */,
 				18502CAD24EADE91001385BB /* SASLogger in Frameworks */,
-				18502C9B24EAD73A001385BB /* APILib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +119,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1811D5C524EC3EAF0056FCC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		183E4B3924EB749600394B54 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,10 +138,12 @@
 		18502C5624EAD39C001385BB = {
 			isa = PBXGroup;
 			children = (
+				1811D5C424EC3E8F0056FCC8 /* APILib */,
 				18502C6124EAD39C001385BB /* GoodBitsStore */,
 				18502C7824EAD3A2001385BB /* GoodBitsStoreTests */,
 				18502C8324EAD3A2001385BB /* GoodBitsStoreUITests */,
 				18502C6024EAD39C001385BB /* Products */,
+				1811D5C524EC3EAF0056FCC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +230,7 @@
 		18502C9C24EAD76D001385BB /* NetworkModule */ = {
 			isa = PBXGroup;
 			children = (
+				18502CA224EADA6D001385BB /* Constants.swift */,
 				18502C9F24EAD995001385BB /* APILibrary.swift */,
 			);
 			path = NetworkModule;
@@ -229,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				183E4B3724EB729E00394B54 /* SASSuperAlert.swift */,
-				18502CA224EADA6D001385BB /* Constants.swift */,
 				18F168AE24EAE520003104FD /* NSObject+Ext.swift */,
 				9D43ED9F24EBCF2E00ABFE7F /* Double+Ext.swift */,
 			);
@@ -278,8 +288,8 @@
 			name = GoodBitsStore;
 			packageProductDependencies = (
 				18502C9724EAD713001385BB /* Alamofire */,
-				18502C9A24EAD73A001385BB /* APILib */,
 				18502CAC24EADE91001385BB /* SASLogger */,
+				1811D5C624EC3EAF0056FCC8 /* APILib */,
 			);
 			productName = GoodBitsStore;
 			productReference = 18502C5F24EAD39C001385BB /* GoodBitsStore.app */;
@@ -355,7 +365,6 @@
 			mainGroup = 18502C5624EAD39C001385BB;
 			packageReferences = (
 				18502C9624EAD713001385BB /* XCRemoteSwiftPackageReference "Alamofire" */,
-				18502C9924EAD73A001385BB /* XCRemoteSwiftPackageReference "APILib" */,
 				18502CAB24EADE91001385BB /* XCRemoteSwiftPackageReference "SASLogger" */,
 			);
 			productRefGroup = 18502C6024EAD39C001385BB /* Products */;
@@ -762,14 +771,6 @@
 				minimumVersion = 5.2.2;
 			};
 		};
-		18502C9924EAD73A001385BB /* XCRemoteSwiftPackageReference "APILib" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AnupSukumaran/APILib.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.5;
-			};
-		};
 		18502CAB24EADE91001385BB /* XCRemoteSwiftPackageReference "SASLogger" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AnupSukumaran/SASLogger.git";
@@ -781,15 +782,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1811D5C624EC3EAF0056FCC8 /* APILib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = APILib;
+		};
 		18502C9724EAD713001385BB /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 18502C9624EAD713001385BB /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		18502C9A24EAD73A001385BB /* APILib */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 18502C9924EAD73A001385BB /* XCRemoteSwiftPackageReference "APILib" */;
-			productName = APILib;
 		};
 		18502CAC24EADE91001385BB /* SASLogger */ = {
 			isa = XCSwiftPackageProductDependency;

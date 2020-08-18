@@ -36,7 +36,7 @@ extension APILibrary {
     }
        
        
-    func dataSetter( _ req: URLRequest, cacheSettings: (needToCache: Bool, cacheID: String) = (false, ""), comp: @escaping (Results<ModelResponse>) -> ()) {
+    func dataSetter( _ req: URLRequest, comp: @escaping (Results<ModelResponse>) -> ()) {
        
        AF.request(req).validate().responseJSON { (response) in
            

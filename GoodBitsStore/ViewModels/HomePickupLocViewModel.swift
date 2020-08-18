@@ -18,12 +18,30 @@ class HomePickupLocViewModel: NSObject {
     var pickUps = [Pickup]()
     var sortedDistancePickUps = [Pickup]()
     var tableReloadHandler: (() -> ())?
+
+    let refreshControl = UIRefreshControl()
     
     override init() {}
     
 }
 
 extension HomePickupLocViewModel {
+    
+    func setUpRefreshController() {
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+       
+    }
+    
+    @objc func refreshData() {
+        refreshControl.endRefreshing()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.callApiPickupLocations()
+        }
+        
+        //productListAPI(isLoader: false,currentPage: 1, pageSize: 10, sc: searchCriteria)
+    }
+    
     
     func requestLocationAutorization() {
         locationManager.delegate = self
@@ -95,6 +113,8 @@ extension HomePickupLocViewModel {
                 
             case.failure(errorStr: let errStr) :
                 UIAlertController.showSuperAlertView(title: .appName, message: errStr.errorStr, actionTitles: ["Ok"], actions: nil)
+                
+                UIAlertController.showSuperAlertView(title: .appName, message: errStr.errorStr, actionTitles: ["Ok"], actions: [UIAlertController.removeSASSuperAlert])
                 Logger.p("errStr = \(errStr)")
             }
         }
