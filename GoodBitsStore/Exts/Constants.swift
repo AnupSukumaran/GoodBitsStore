@@ -9,6 +9,8 @@
 import Foundation
 
 extension String {
+    static var appName = "GoodBits Store"
+    
     static var scheme = "https"
     static var host = "api-staging.pmlo.co"
     static var path = "/v3"

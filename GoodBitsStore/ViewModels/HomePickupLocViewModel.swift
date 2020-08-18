@@ -14,6 +14,9 @@ class HomePickupLocViewModel: NSObject {
     
     var locationManager = CLLocationManager()
     var currentLoc: CLLocation?
+    var pickupLocationsModel:PickupLocationsModel?
+    var pickUps = [Pickup]()
+    var tableReloadHandler: (() -> ())?
     
     override init() {
         
@@ -51,22 +54,19 @@ extension HomePickupLocViewModel {
         }
     }
     
-//    func getDistance(coord1: (lat: CLLocationDegrees, long: CLLocationDegrees), coord2: (lat: CLLocationDegrees, long: CLLocationDegrees)) -> CLLocationDistance {
-//        let startPoint = CLLocation(latitude: coord1.lat, longitude: coord1.long)
-//        let stopPoint = CLLocation(latitude: coord2.lat, longitude: coord2.long)
-//        return startPoint.distance(from: stopPoint)
-//    }
-    
     func callApiPickupLocations() {
         
         APILibrary.shared.apiPickupLocations(filterId: "1") { (response) in
             switch response {
             case.success(let data):
-                
-                Logger.p("pickup?.count = \(String(describing: data.pickupLocationsModel?.pickup?.count))")
+                self.pickupLocationsModel = data.pickupLocationsModel
+                if let pickUps = data.pickupLocationsModel?.pickup {
+                    self.pickUps = pickUps.filter{$0.active == true}
+                    self.tableReloadHandler?()
+                }
                 
             case.failure(errorStr: let errStr) :
-                
+                UIAlertController.showSuperAlertView(title: .appName, message: errStr.errorStr, actionTitles: ["Ok"], actions: nil)
                 Logger.p("errStr = \(errStr)")
             }
         }
@@ -76,7 +76,7 @@ extension HomePickupLocViewModel {
 
 extension HomePickupLocViewModel: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return pickupLocationsModel?.pickup?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

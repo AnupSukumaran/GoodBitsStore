@@ -14,8 +14,8 @@
             filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "callApiPickupLocations()"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "userAllowedToUseLocation()"
             landmarkType = "7">
             <Locations>
@@ -158,8 +158,8 @@
             filePath = "GoodBitsStore/ViewControllers/HomePickupLocViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "userAllowedToUseLocation()"
             landmarkType = "7">
          </BreakpointContent>

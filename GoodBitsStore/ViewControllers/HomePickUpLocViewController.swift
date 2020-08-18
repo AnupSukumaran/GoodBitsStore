@@ -13,9 +13,9 @@ class HomePickUpLocViewController: UIViewController {
     
     
     @IBOutlet weak var locListView: UITableView!
+    @IBOutlet weak var locationBtn: UIButton!
     
     var viewModel: HomePickupLocViewModel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,13 @@ class HomePickUpLocViewController: UIViewController {
         locListView.delegate = viewModel
         
         viewModel.callApiPickupLocations()
+    }
+    
+    
+    @IBAction func locationBtnAction(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        let btnImage = sender.isSelected ? UIImage(named: "locOff") : UIImage(named: "locOn")
+        locationBtn.setImage(btnImage, for: .normal)
     }
     
 }

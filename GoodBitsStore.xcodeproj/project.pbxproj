@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183E4B3824EB729E00394B54 /* SASSuperAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3724EB729E00394B54 /* SASSuperAlert.swift */; };
+		183E4B3B24EB74E900394B54 /* HomePickUpLocTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3A24EB74E900394B54 /* HomePickUpLocTableViewCell.swift */; };
+		183E4B3D24EB79AF00394B54 /* HomePickUpLocCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3C24EB79AF00394B54 /* HomePickUpLocCellModel.swift */; };
 		18502C6324EAD39C001385BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C6224EAD39C001385BB /* AppDelegate.swift */; };
 		18502C6524EAD39C001385BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C6424EAD39C001385BB /* SceneDelegate.swift */; };
 		18502C6A24EAD39C001385BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18502C6824EAD39C001385BB /* Main.storyboard */; };
@@ -51,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		183E4B3724EB729E00394B54 /* SASSuperAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASSuperAlert.swift; sourceTree = "<group>"; };
+		183E4B3A24EB74E900394B54 /* HomePickUpLocTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickUpLocTableViewCell.swift; sourceTree = "<group>"; };
+		183E4B3C24EB79AF00394B54 /* HomePickUpLocCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickUpLocCellModel.swift; sourceTree = "<group>"; };
 		18502C5F24EAD39C001385BB /* GoodBitsStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodBitsStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18502C6224EAD39C001385BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18502C6424EAD39C001385BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183E4B3924EB749600394B54 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				18F168B024EAE5D7003104FD /* HomePickupLocViewModel.swift */,
+				183E4B3C24EB79AF00394B54 /* HomePickUpLocCellModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		18502C5624EAD39C001385BB = {
 			isa = PBXGroup;
 			children = (
@@ -133,10 +148,11 @@
 			children = (
 				18502C6224EAD39C001385BB /* AppDelegate.swift */,
 				18502C6424EAD39C001385BB /* SceneDelegate.swift */,
-				18502CA824EADE23001385BB /* Model */,
 				18502C9C24EAD76D001385BB /* NetworkModule */,
-				18502C9224EAD539001385BB /* Storyboards */,
+				18502CA824EADE23001385BB /* Model */,
+				183E4B3924EB749600394B54 /* ViewModels */,
 				18502C9524EAD5E0001385BB /* ViewControllers */,
+				18502C9224EAD539001385BB /* Storyboards */,
 				18502CA124EADA59001385BB /* Exts */,
 				18502C9324EAD56E001385BB /* Resources */,
 				18502C9424EAD589001385BB /* ConfigFiles */,
@@ -191,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				18F168AC24EAE4EE003104FD /* HomePickUpLocViewController.swift */,
-				18F168B024EAE5D7003104FD /* HomePickupLocViewModel.swift */,
+				183E4B3A24EB74E900394B54 /* HomePickUpLocTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -207,6 +223,7 @@
 		18502CA124EADA59001385BB /* Exts */ = {
 			isa = PBXGroup;
 			children = (
+				183E4B3724EB729E00394B54 /* SASSuperAlert.swift */,
 				18502CA224EADA6D001385BB /* Constants.swift */,
 				18F168AE24EAE520003104FD /* NSObject+Ext.swift */,
 			);
@@ -390,8 +407,11 @@
 				18F168AB24EAE402003104FD /* Store.swift in Sources */,
 				18F168A724EAE402003104FD /* Features.swift in Sources */,
 				18502C6324EAD39C001385BB /* AppDelegate.swift in Sources */,
+				183E4B3B24EB74E900394B54 /* HomePickUpLocTableViewCell.swift in Sources */,
+				183E4B3824EB729E00394B54 /* SASSuperAlert.swift in Sources */,
 				18502CA024EAD995001385BB /* APILibrary.swift in Sources */,
 				18502C6524EAD39C001385BB /* SceneDelegate.swift in Sources */,
+				183E4B3D24EB79AF00394B54 /* HomePickUpLocCellModel.swift in Sources */,
 				18F1689F24EAE3E6003104FD /* PickupLocationsModel.swift in Sources */,
 				18502CAA24EADE3E001385BB /* ModelResponse.swift in Sources */,
 			);
