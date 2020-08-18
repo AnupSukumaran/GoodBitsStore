@@ -24,6 +24,7 @@
 		18502CA724EADE03001385BB /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502CA624EADE03001385BB /* Results.swift */; };
 		18502CAA24EADE3E001385BB /* ModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502CA924EADE3E001385BB /* ModelResponse.swift */; };
 		18502CAD24EADE91001385BB /* SASLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 18502CAC24EADE91001385BB /* SASLogger */; };
+		1866312624EC2006005F83B5 /* APILibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866312524EC2006005F83B5 /* APILibraryTests.swift */; };
 		18F1689F24EAE3E6003104FD /* PickupLocationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1689E24EAE3E6003104FD /* PickupLocationsModel.swift */; };
 		18F168A624EAE402003104FD /* Primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F168A024EAE402003104FD /* Primary.swift */; };
 		18F168A724EAE402003104FD /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F168A124EAE402003104FD /* Features.swift */; };
@@ -75,6 +76,7 @@
 		18502CA224EADA6D001385BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		18502CA624EADE03001385BB /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		18502CA924EADE3E001385BB /* ModelResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelResponse.swift; sourceTree = "<group>"; };
+		1866312524EC2006005F83B5 /* APILibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILibraryTests.swift; sourceTree = "<group>"; };
 		18F1689E24EAE3E6003104FD /* PickupLocationsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupLocationsModel.swift; sourceTree = "<group>"; };
 		18F168A024EAE402003104FD /* Primary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Primary.swift; sourceTree = "<group>"; };
 		18F168A124EAE402003104FD /* Features.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				18502C7924EAD3A2001385BB /* GoodBitsStoreTests.swift */,
 				18502C7B24EAD3A2001385BB /* Info.plist */,
+				1866312524EC2006005F83B5 /* APILibraryTests.swift */,
 			);
 			path = GoodBitsStoreTests;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1866312624EC2006005F83B5 /* APILibraryTests.swift in Sources */,
 				18502C7A24EAD3A2001385BB /* GoodBitsStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,7 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3P3J8AFD59;
+				DEVELOPMENT_TEAM = RDRMVW96A6;
 				INFOPLIST_FILE = GoodBitsStore/ConfigFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -610,7 +614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3P3J8AFD59;
+				DEVELOPMENT_TEAM = RDRMVW96A6;
 				INFOPLIST_FILE = GoodBitsStore/ConfigFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
