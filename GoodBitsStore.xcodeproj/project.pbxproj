@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1811D5C724EC3EAF0056FCC8 /* APILib in Frameworks */ = {isa = PBXBuildFile; productRef = 1811D5C624EC3EAF0056FCC8 /* APILib */; };
 		183E4B3824EB729E00394B54 /* SASSuperAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3724EB729E00394B54 /* SASSuperAlert.swift */; };
 		183E4B3B24EB74E900394B54 /* HomePickUpLocTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3A24EB74E900394B54 /* HomePickUpLocTableViewCell.swift */; };
 		183E4B3D24EB79AF00394B54 /* HomePickUpLocCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3C24EB79AF00394B54 /* HomePickUpLocCellModel.swift */; };
 		1845667824ECBF1C006CE14F /* UIViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845667724ECBF1C006CE14F /* UIViewCustom.swift */; };
 		1845667A24ECBF27006CE14F /* UIButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845667924ECBF27006CE14F /* UIButtonCustom.swift */; };
+		1845667D24ECCE69006CE14F /* APILib in Frameworks */ = {isa = PBXBuildFile; productRef = 1845667C24ECCE69006CE14F /* APILib */; };
 		18502C6324EAD39C001385BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C6224EAD39C001385BB /* AppDelegate.swift */; };
 		18502C6524EAD39C001385BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C6424EAD39C001385BB /* SceneDelegate.swift */; };
 		18502C6A24EAD39C001385BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18502C6824EAD39C001385BB /* Main.storyboard */; };
@@ -62,7 +62,6 @@
 
 /* Begin PBXFileReference section */
 		0B1667480FAB6BB90147E0D2 /* Pods-GoodBitsStore-GoodBitsStoreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBitsStore-GoodBitsStoreUITests.release.xcconfig"; path = "Target Support Files/Pods-GoodBitsStore-GoodBitsStoreUITests/Pods-GoodBitsStore-GoodBitsStoreUITests.release.xcconfig"; sourceTree = "<group>"; };
-		1811D5C424EC3E8F0056FCC8 /* APILib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = APILib; path = ../Frameworks_and_packages/APILib; sourceTree = "<group>"; };
 		183E4B3724EB729E00394B54 /* SASSuperAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASSuperAlert.swift; sourceTree = "<group>"; };
 		183E4B3A24EB74E900394B54 /* HomePickUpLocTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickUpLocTableViewCell.swift; sourceTree = "<group>"; };
 		183E4B3C24EB79AF00394B54 /* HomePickUpLocCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickUpLocCellModel.swift; sourceTree = "<group>"; };
@@ -112,8 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1845667D24ECCE69006CE14F /* APILib in Frameworks */,
 				18502C9824EAD713001385BB /* Alamofire in Frameworks */,
-				1811D5C724EC3EAF0056FCC8 /* APILib in Frameworks */,
 				18502CAD24EADE91001385BB /* SASLogger in Frameworks */,
 				98273FB5A30869EA1EDD750F /* Pods_GoodBitsStore.framework in Frameworks */,
 			);
@@ -182,7 +181,6 @@
 		18502C5624EAD39C001385BB = {
 			isa = PBXGroup;
 			children = (
-				1811D5C424EC3E8F0056FCC8 /* APILib */,
 				18502C6124EAD39C001385BB /* GoodBitsStore */,
 				18502C7824EAD3A2001385BB /* GoodBitsStoreTests */,
 				18502C8324EAD3A2001385BB /* GoodBitsStoreUITests */,
@@ -337,7 +335,7 @@
 			packageProductDependencies = (
 				18502C9724EAD713001385BB /* Alamofire */,
 				18502CAC24EADE91001385BB /* SASLogger */,
-				1811D5C624EC3EAF0056FCC8 /* APILib */,
+				1845667C24ECCE69006CE14F /* APILib */,
 			);
 			productName = GoodBitsStore;
 			productReference = 18502C5F24EAD39C001385BB /* GoodBitsStore.app */;
@@ -417,6 +415,7 @@
 			packageReferences = (
 				18502C9624EAD713001385BB /* XCRemoteSwiftPackageReference "Alamofire" */,
 				18502CAB24EADE91001385BB /* XCRemoteSwiftPackageReference "SASLogger" */,
+				1845667B24ECCE69006CE14F /* XCRemoteSwiftPackageReference "APILib" */,
 			);
 			productRefGroup = 18502C6024EAD39C001385BB /* Products */;
 			projectDirPath = "";
@@ -925,6 +924,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1845667B24ECCE69006CE14F /* XCRemoteSwiftPackageReference "APILib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AnupSukumaran/APILib.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.6;
+			};
+		};
 		18502C9624EAD713001385BB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -944,8 +951,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1811D5C624EC3EAF0056FCC8 /* APILib */ = {
+		1845667C24ECCE69006CE14F /* APILib */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 1845667B24ECCE69006CE14F /* XCRemoteSwiftPackageReference "APILib" */;
 			productName = APILib;
 		};
 		18502C9724EAD713001385BB /* Alamofire */ = {
