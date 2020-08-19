@@ -142,7 +142,6 @@ extension HomePickupLocViewModel: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: HomePickUpLocTableViewCell.identifier, for: indexPath) as? HomePickUpLocTableViewCell {
             
             cell.cellModel = HomePickUpLocCellModel(pickup: currentLoc == nil ? pickUps[indexPath.row] : sortedDistancePickUps[indexPath.row])
-            
             cell.layoutIfNeeded()
         
             return cell

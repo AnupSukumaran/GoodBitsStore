@@ -15,4 +15,8 @@ public extension Double {
     func toDecimalsStr(_ decimalPointsRequired: Int = 2) -> String {
         return String(format: "%.\(decimalPointsRequired)f", ceil(self*100)/100)
     }
+    
+    func meterToKm() -> Double {
+        return self / 1000
+    }
 }
