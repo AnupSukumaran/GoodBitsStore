@@ -150,7 +150,6 @@ extension HomePickupLocViewModel: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
-
 }
 
 extension HomePickupLocViewModel: CLLocationManagerDelegate {
