@@ -53,15 +53,21 @@ extension HomePickUpLocViewController {
     func setHandlers() {
         viewModel?.tableReloadHandler = { [weak self] in
             guard let vc = self else {return}
+            vc.locListView.isHidden = (vc.viewModel?.pickupLocationsModel?.pickup?.count ?? 0) == 0
             vc.locListView.reloadData()
         }
         
         viewModel?.locHandler = { [weak self] isEnabled in
-        guard let vc = self else {return}
+            guard let vc = self else {return}
             
             let btnImage = isEnabled ? UIImage(named: "locOff") : UIImage(named: "locOn")
             vc.locationBtn.setImage(btnImage, for: .normal)
             vc.locationBtn.isSelected = isEnabled
+        }
+        
+        viewModel?.errorHandler = {  [weak self] in
+            guard let vc = self else {return}
+            vc.locListView.isHidden = true
         }
        
     }

@@ -24,13 +24,12 @@ class HomePickupLocViewModel: NSObject {
     var loader: LoaderView!
     var locHandler: ((_ success: Bool) -> ())?
     var settingHandler: (() -> ())? = {
-        
         UIAlertController.removeSASSuperAlert()
         UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-//        UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
     }
     
     var cancelHandler: (() -> ())?
+    var errorHandler: (() -> ())?
     
     override init() {}
     
@@ -143,6 +142,7 @@ extension HomePickupLocViewModel {
                 }
                 
             case.failure(errorStr: let errStr) :
+                self.errorHandler?()
                 UIAlertController.showSuperAlertView(title: .appName, message: errStr.errorStr, actionTitles: ["Ok"], actions: [UIAlertController.removeSASSuperAlert])
         
             }
