@@ -33,28 +33,28 @@ class HomePickupLocViewModel: NSObject {
 
 extension HomePickupLocViewModel {
     
+    /// function to setup refresh controller
     func setUpRefreshController() {
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
-       
     }
     
+    /// Selector funciton upon pull refresh action
     @objc func refreshData() {
         refreshControl.endRefreshing()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.callApiPickupLocations()
         }
-        
-        //productListAPI(isLoader: false,currentPage: 1, pageSize: 10, sc: searchCriteria)
     }
     
-    
+    /// Function that request for authorization to access the user current location and setting up the the best level of accuracy available and also assigned delegate to access the protocol funtions
     func requestLocationAutorization() {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest //kCLLocationAccuracyNearestTenMeters//kCLLocationAccuracyKilometer
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
+    /// This funciton stops and starts updating locations as the use press the location button and also sorts the distance calculated from the current location receieved in assending order. and update the table by calling the tableReloadHandler
+    /// - Parameter startLocating: This value is received from the button action to enable user to access the current location.
     func checkUserAutorizedLocation(startLocating: Bool) {
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
         CLLocationManager.authorizationStatus() == .authorizedAlways) {
@@ -65,21 +65,16 @@ extension HomePickupLocViewModel {
                 self.tableReloadHandler?()
                 return
             }
-            
-            
         
             locationManager.startUpdatingLocation()
             currentLoc = locationManager.location
             let currLat = currentLoc?.coordinate.latitude ?? 0.0
             let currLong = currentLoc?.coordinate.longitude ?? 0.0
             
-        
-            
             let newPickUp = pickUps.map { (pickUp) -> Pickup in
                 var newPickUp = pickUp
                 if let lat = newPickUp.latitude , let long = newPickUp.longitude {
                     let distance = getDistance(coord1: (lat: currLat, long: currLong), coord2: (lat: lat, long: long))
-                    Logger.p("ss.Distance1 = \(distance)")
                     newPickUp.distance = distance
                 }
                 
@@ -92,10 +87,6 @@ extension HomePickupLocViewModel {
                 return xd < yd
             }
             
-            Logger.p("ss.Distance2 = \(sortedDistancePickUps.map{$0.distance})")
-            
-            Logger.p("SASlat = \(currLat)")
-            Logger.p("SASlong = \(currLong)")
             self.tableReloadHandler?()
             
         } else {
@@ -103,6 +94,8 @@ extension HomePickupLocViewModel {
         }
     }
     
+    
+    /// API Call
     func callApiPickupLocations() {
         loader.startAnimating()
         APILibrary.shared.apiPickupLocations(filterId: "1") { (response) in
@@ -113,21 +106,21 @@ extension HomePickupLocViewModel {
                 self.pickupLocationsModel = data.pickupLocationsModel
                 if let pickUps = data.pickupLocationsModel?.pickup {
                     self.pickUps = pickUps.filter{$0.active == true}
-                    Logger.p("pickUps1 = \(self.pickUps.count)")
                     self.pickUps = self.removeDataIfValueNotAvailable(self.pickUps)
-                    Logger.p("pickUps2 = \(self.pickUps.count)")
                     self.tableReloadHandler?()
                 }
                 
             case.failure(errorStr: let errStr) :
-                UIAlertController.showSuperAlertView(title: .appName, message: errStr.errorStr, actionTitles: ["Ok"], actions: nil)
-                
                 UIAlertController.showSuperAlertView(title: .appName, message: errStr.errorStr, actionTitles: ["Ok"], actions: [UIAlertController.removeSASSuperAlert])
-                Logger.p("errStr = \(errStr)")
+        
             }
         }
     }
     
+    
+    /// Function that removes all the unwanted empty data and filters out the empty values and creates a new collection of array
+    /// - Parameter pickUps: the pickup model array values reveived from the api response.
+    /// - Returns: Returns a new values of pickup array filtering out the empty values
     func removeDataIfValueNotAvailable(_ pickUps: [Pickup]) -> [Pickup] {
         return pickUps.filter({ (pickUpsModel) -> Bool in
             if (pickUpsModel.alias ?? "") == "" && (pickUpsModel.address1 ?? "") == "" && (pickUpsModel.address2 ?? "") == "" && (pickUpsModel.city ?? "") == "" {
@@ -138,6 +131,7 @@ extension HomePickupLocViewModel {
     }
     
 }
+
 
 extension HomePickupLocViewModel: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -150,23 +144,11 @@ extension HomePickupLocViewModel: UITableViewDelegate, UITableViewDataSource {
             cell.cellModel = HomePickUpLocCellModel(pickup: currentLoc == nil ? pickUps[indexPath.row] : sortedDistancePickUps[indexPath.row])
             
             cell.layoutIfNeeded()
-            
-
+        
             return cell
         }
         return UITableViewCell()
     }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.clipsToBounds = false
-        cell.contentView.clipsToBounds = false
-    }
-    
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.clipsToBounds = false
-        cell.contentView.clipsToBounds = false
-    }
-    
     
 
 }
@@ -174,7 +156,6 @@ extension HomePickupLocViewModel: UITableViewDelegate, UITableViewDataSource {
 extension HomePickupLocViewModel: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        Logger.p("status = \(status.rawValue)")
         
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:

@@ -26,21 +26,25 @@ class APILibrary: NSObject {
 
 extension APILibrary {
     
+    /// The API call to list all the shop names and address and their location.
+    /// - Parameters:
+    ///   - filterId: The parameter for the api
+    ///   - comp: an escaping handler at execute upon API response as type Results
     public func apiPickupLocations(filterId: String, comp: @escaping (Results<ModelResponse>) -> ()) {
         let params: OJSON = [.kfilterShop_id: filterId]
         let req = APILib.makeRequest(method: .get, params: params, withHeaders: [contentType], apiComponents: apiComponent, withPathExtension: .pPickupLocations)
 
-        Logger.p("reqURL = \(req.url?.absoluteURL)")
-
         dataSetter(req, comp: comp)
     }
        
-       
+    
+    /// This function creates the data request using Alamofire
+    /// - Parameters:
+    ///   - req: request created from APILib package
+    ///   - comp: an escaping handler at execute upon API response as type Results
     func dataSetter( _ req: URLRequest, comp: @escaping (Results<ModelResponse>) -> ()) {
        
        AF.request(req).validate().responseJSON { (response) in
-           
-           Logger.p("API_JData = \(self.printJsonResponse(response.result))")
            
            guard let statusCode = response.response?.statusCode, statusCode >= 200 && statusCode <= 299 else {
               comp(.failure(errorStr: response.error!.localizedDescription))

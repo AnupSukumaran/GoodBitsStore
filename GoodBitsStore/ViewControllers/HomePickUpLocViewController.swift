@@ -52,7 +52,6 @@ extension HomePickUpLocViewController {
     func setHandlers() {
         viewModel?.tableReloadHandler = { [weak self] in
             guard let vc = self else {return}
-            
             vc.locListView.reloadData()
         }
        

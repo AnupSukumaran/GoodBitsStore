@@ -17,7 +17,6 @@ class HomePickUpLocTableViewCell: UITableViewCell {
     @IBOutlet weak var lbCity: UILabel!
     @IBOutlet weak var lbKm: UILabel!
     
-    @IBOutlet weak var cellHeight: NSLayoutConstraint!
     var cellModel: HomePickUpLocCellModel? {
         didSet {
             cellModelConfig()
@@ -29,15 +28,9 @@ class HomePickUpLocTableViewCell: UITableViewCell {
         guard let model = cellModel else {return}
         hideLabelsIfNoData(in: model.pickup)
         lbPickAlias.text = model.pickup.alias ?? ""
-        
-//        let comma = (model.pickup.address1 == "") ? "" : ", "
-//        let add2 = (model.pickup.address2 == "") ? "" : (comma + (model.pickup.address2 ?? ""))
-        lbAddress.text = settingAddresTxt(model.pickup)//(model.pickup.address1 ?? "") + add2
+        lbAddress.text = settingAddresTxt(model.pickup)
         lbCity.text = model.pickup.city ?? ""
         lbKm.text = setDistanceVal(model.pickup)
-//        if let d = model.pickup.distance {
-//            lbKm.text = d.toDecimalsStr(2) + " km"
-//        }
     }
     
     func setDistanceVal(_ pickUp: Pickup) -> String {
