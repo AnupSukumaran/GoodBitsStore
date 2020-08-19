@@ -73,6 +73,9 @@
                                                                 </stackView>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <accessibility key="accessibilityConfiguration" label="viewForm">
+                                                                <bool key="isElement" value="YES"/>
+                                                            </accessibility>
                                                             <constraints>
                                                                 <constraint firstItem="nlo-yM-8RO" firstAttribute="top" secondItem="e1g-qH-0v2" secondAttribute="top" constant="16" id="CDC-dN-1um"/>
                                                                 <constraint firstItem="nlo-yM-8RO" firstAttribute="leading" secondItem="e1g-qH-0v2" secondAttribute="leading" constant="16" id="OMr-WQ-8wt"/>
@@ -110,6 +113,9 @@
                                                         <constraint firstItem="e1g-qH-0v2" firstAttribute="top" secondItem="iD2-Zh-H7m" secondAttribute="top" constant="16" id="i9H-9q-rCC"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <accessibility key="accessibilityConfiguration" label="maincell">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
                                                 <connections>
                                                     <outlet property="lbAddress" destination="toC-Jf-8LD" id="k31-D8-2h2"/>
                                                     <outlet property="lbCity" destination="q3W-hL-Tmw" id="ZVz-i4-Nrc"/>
@@ -118,9 +124,15 @@
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="mainTable"/>
+                                        </userDefinedRuntimeAttributes>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92156862745098034" green="0.92941176470588238" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="subview">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstItem="yIW-9c-jr7" firstAttribute="leading" secondItem="6tZ-ne-AnJ" secondAttribute="leading" id="MJn-pY-gs0"/>
                                     <constraint firstAttribute="trailing" secondItem="yIW-9c-jr7" secondAttribute="trailing" id="iFX-QW-aDc"/>
@@ -130,6 +142,9 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92941176470588238" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" label="mainview">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="6tZ-ne-AnJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qef-nN-wed"/>
                             <constraint firstItem="6tZ-ne-AnJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UUK-Zp-h4K"/>
@@ -143,6 +158,9 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zVI-Fr-HeQ">
                                 <rect key="frame" x="250" y="0.0" width="144" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="-68" maxY="0.0"/>

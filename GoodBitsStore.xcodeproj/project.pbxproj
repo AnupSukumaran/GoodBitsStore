@@ -369,6 +369,7 @@
 				18502C7D24EAD3A2001385BB /* Frameworks */,
 				18502C7E24EAD3A2001385BB /* Resources */,
 				92A5F8E732FFA33BFC6EF5A7 /* [CP] Embed Pods Frameworks */,
+				9D3490F124ED55350008BC53 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -489,6 +490,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodBitsStore-GoodBitsStoreUITests/Pods-GoodBitsStore-GoodBitsStoreUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9D3490F124ED55350008BC53 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcrun simctl uninstall booted com.vvse.toiletmap\n";
 		};
 		AD2E3DB734D9BD42F71AEABF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
