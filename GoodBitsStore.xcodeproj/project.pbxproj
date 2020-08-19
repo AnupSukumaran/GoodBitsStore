@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1811D5C724EC3EAF0056FCC8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1811D5C624EC3EAF0056FCC8 /* SwiftPackageProductDependency */; };
+		1811D5C724EC3EAF0056FCC8 /* APILib in Frameworks */ = {isa = PBXBuildFile; productRef = 1811D5C624EC3EAF0056FCC8 /* APILib */; };
 		183E4B3824EB729E00394B54 /* SASSuperAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3724EB729E00394B54 /* SASSuperAlert.swift */; };
 		183E4B3B24EB74E900394B54 /* HomePickUpLocTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3A24EB74E900394B54 /* HomePickUpLocTableViewCell.swift */; };
 		183E4B3D24EB79AF00394B54 /* HomePickUpLocCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E4B3C24EB79AF00394B54 /* HomePickUpLocCellModel.swift */; };
+		1845667824ECBF1C006CE14F /* UIViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845667724ECBF1C006CE14F /* UIViewCustom.swift */; };
+		1845667A24ECBF27006CE14F /* UIButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845667924ECBF27006CE14F /* UIButtonCustom.swift */; };
 		18502C6324EAD39C001385BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C6224EAD39C001385BB /* AppDelegate.swift */; };
 		18502C6524EAD39C001385BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C6424EAD39C001385BB /* SceneDelegate.swift */; };
 		18502C6A24EAD39C001385BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18502C6824EAD39C001385BB /* Main.storyboard */; };
@@ -18,12 +20,12 @@
 		18502C6F24EAD3A1001385BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18502C6D24EAD3A1001385BB /* LaunchScreen.storyboard */; };
 		18502C7A24EAD3A2001385BB /* GoodBitsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C7924EAD3A2001385BB /* GoodBitsStoreTests.swift */; };
 		18502C8524EAD3A2001385BB /* GoodBitsStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C8424EAD3A2001385BB /* GoodBitsStoreUITests.swift */; };
-		18502C9824EAD713001385BB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 18502C9724EAD713001385BB /* SwiftPackageProductDependency */; };
+		18502C9824EAD713001385BB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18502C9724EAD713001385BB /* Alamofire */; };
 		18502CA024EAD995001385BB /* APILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502C9F24EAD995001385BB /* APILibrary.swift */; };
 		18502CA324EADA6D001385BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502CA224EADA6D001385BB /* Constants.swift */; };
 		18502CA724EADE03001385BB /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502CA624EADE03001385BB /* Results.swift */; };
 		18502CAA24EADE3E001385BB /* ModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18502CA924EADE3E001385BB /* ModelResponse.swift */; };
-		18502CAD24EADE91001385BB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 18502CAC24EADE91001385BB /* SwiftPackageProductDependency */; };
+		18502CAD24EADE91001385BB /* SASLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 18502CAC24EADE91001385BB /* SASLogger */; };
 		1866312624EC2006005F83B5 /* APILibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866312524EC2006005F83B5 /* APILibraryTests.swift */; };
 		18F1689F24EAE3E6003104FD /* PickupLocationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1689E24EAE3E6003104FD /* PickupLocationsModel.swift */; };
 		18F168A624EAE402003104FD /* Primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F168A024EAE402003104FD /* Primary.swift */; };
@@ -64,6 +66,8 @@
 		183E4B3724EB729E00394B54 /* SASSuperAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASSuperAlert.swift; sourceTree = "<group>"; };
 		183E4B3A24EB74E900394B54 /* HomePickUpLocTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickUpLocTableViewCell.swift; sourceTree = "<group>"; };
 		183E4B3C24EB79AF00394B54 /* HomePickUpLocCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickUpLocCellModel.swift; sourceTree = "<group>"; };
+		1845667724ECBF1C006CE14F /* UIViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewCustom.swift; sourceTree = "<group>"; };
+		1845667924ECBF27006CE14F /* UIButtonCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonCustom.swift; sourceTree = "<group>"; };
 		18502C5F24EAD39C001385BB /* GoodBitsStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodBitsStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18502C6224EAD39C001385BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18502C6424EAD39C001385BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,9 +112,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18502C9824EAD713001385BB /* BuildFile in Frameworks */,
-				1811D5C724EC3EAF0056FCC8 /* BuildFile in Frameworks */,
-				18502CAD24EADE91001385BB /* BuildFile in Frameworks */,
+				18502C9824EAD713001385BB /* Alamofire in Frameworks */,
+				1811D5C724EC3EAF0056FCC8 /* APILib in Frameworks */,
+				18502CAD24EADE91001385BB /* SASLogger in Frameworks */,
 				98273FB5A30869EA1EDD750F /* Pods_GoodBitsStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,7 +148,6 @@
 				BB555625ECA3DA8A0FA570C9 /* Pods-GoodBitsStoreTests.debug.xcconfig */,
 				D9D0DFA2AD036612B8C4A197 /* Pods-GoodBitsStoreTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -165,6 +168,15 @@
 				183E4B3C24EB79AF00394B54 /* HomePickUpLocCellModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1845667624ECBEF5006CE14F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1845667924ECBF27006CE14F /* UIButtonCustom.swift */,
+				1845667724ECBF1C006CE14F /* UIViewCustom.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		18502C5624EAD39C001385BB = {
@@ -193,6 +205,7 @@
 		18502C6124EAD39C001385BB /* GoodBitsStore */ = {
 			isa = PBXGroup;
 			children = (
+				1845667624ECBEF5006CE14F /* Views */,
 				18502C6224EAD39C001385BB /* AppDelegate.swift */,
 				18502C6424EAD39C001385BB /* SceneDelegate.swift */,
 				18502C9C24EAD76D001385BB /* NetworkModule */,
@@ -322,9 +335,9 @@
 			);
 			name = GoodBitsStore;
 			packageProductDependencies = (
-				18502C9724EAD713001385BB /* SwiftPackageProductDependency */,
-				18502CAC24EADE91001385BB /* SwiftPackageProductDependency */,
-				1811D5C624EC3EAF0056FCC8 /* SwiftPackageProductDependency */,
+				18502C9724EAD713001385BB /* Alamofire */,
+				18502CAC24EADE91001385BB /* SASLogger */,
+				1811D5C624EC3EAF0056FCC8 /* APILib */,
 			);
 			productName = GoodBitsStore;
 			productReference = 18502C5F24EAD39C001385BB /* GoodBitsStore.app */;
@@ -402,8 +415,8 @@
 			);
 			mainGroup = 18502C5624EAD39C001385BB;
 			packageReferences = (
-				18502C9624EAD713001385BB /* RemoteSwiftPackageReference */,
-				18502CAB24EADE91001385BB /* RemoteSwiftPackageReference */,
+				18502C9624EAD713001385BB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				18502CAB24EADE91001385BB /* XCRemoteSwiftPackageReference "SASLogger" */,
 			);
 			productRefGroup = 18502C6024EAD39C001385BB /* Products */;
 			projectDirPath = "";
@@ -563,9 +576,11 @@
 				18F168AB24EAE402003104FD /* Store.swift in Sources */,
 				18F168A724EAE402003104FD /* Features.swift in Sources */,
 				18502C6324EAD39C001385BB /* AppDelegate.swift in Sources */,
+				1845667A24ECBF27006CE14F /* UIButtonCustom.swift in Sources */,
 				183E4B3B24EB74E900394B54 /* HomePickUpLocTableViewCell.swift in Sources */,
 				183E4B3824EB729E00394B54 /* SASSuperAlert.swift in Sources */,
 				9D43EDA024EBCF2E00ABFE7F /* Double+Ext.swift in Sources */,
+				1845667824ECBF1C006CE14F /* UIViewCustom.swift in Sources */,
 				18502CA024EAD995001385BB /* APILibrary.swift in Sources */,
 				18502C6524EAD39C001385BB /* SceneDelegate.swift in Sources */,
 				183E4B3D24EB79AF00394B54 /* HomePickUpLocCellModel.swift in Sources */,
@@ -910,7 +925,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		18502C9624EAD713001385BB /* RemoteSwiftPackageReference */ = {
+		18502C9624EAD713001385BB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -918,7 +933,7 @@
 				minimumVersion = 5.2.2;
 			};
 		};
-		18502CAB24EADE91001385BB /* RemoteSwiftPackageReference */ = {
+		18502CAB24EADE91001385BB /* XCRemoteSwiftPackageReference "SASLogger" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AnupSukumaran/SASLogger.git";
 			requirement = {
@@ -929,18 +944,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1811D5C624EC3EAF0056FCC8 /* SwiftPackageProductDependency */ = {
+		1811D5C624EC3EAF0056FCC8 /* APILib */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = APILib;
 		};
-		18502C9724EAD713001385BB /* SwiftPackageProductDependency */ = {
+		18502C9724EAD713001385BB /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18502C9624EAD713001385BB /* RemoteSwiftPackageReference */;
+			package = 18502C9624EAD713001385BB /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		18502CAC24EADE91001385BB /* SwiftPackageProductDependency */ = {
+		18502CAC24EADE91001385BB /* SASLogger */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18502CAB24EADE91001385BB /* RemoteSwiftPackageReference */;
+			package = 18502CAB24EADE91001385BB /* XCRemoteSwiftPackageReference "SASLogger" */;
 			productName = SASLogger;
 		};
 /* End XCSwiftPackageProductDependency section */

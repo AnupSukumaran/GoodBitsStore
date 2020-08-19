@@ -148,12 +148,26 @@ extension HomePickupLocViewModel: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: HomePickUpLocTableViewCell.identifier, for: indexPath) as? HomePickUpLocTableViewCell {
             
             cell.cellModel = HomePickUpLocCellModel(pickup: currentLoc == nil ? pickUps[indexPath.row] : sortedDistancePickUps[indexPath.row])
-            //cell.currentLoc = currentLoc
+            
             cell.layoutIfNeeded()
+            
+
             return cell
         }
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.clipsToBounds = false
+        cell.contentView.clipsToBounds = false
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.clipsToBounds = false
+        cell.contentView.clipsToBounds = false
+    }
+    
+    
 
 }
 

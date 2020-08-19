@@ -17,20 +17,28 @@ class HomePickUpLocTableViewCell: UITableViewCell {
     @IBOutlet weak var lbCity: UILabel!
     @IBOutlet weak var lbKm: UILabel!
     
+    @IBOutlet weak var cellHeight: NSLayoutConstraint!
     var cellModel: HomePickUpLocCellModel? {
         didSet {
             cellModelConfig()
         }
     }
     
-    var currentLoc: CLLocation? {
-        didSet {
-            getDistancevalue()
-        }
-    }
+//    var currentLoc: CLLocation? {
+//        didSet {
+//            getDistancevalue()
+//        }
+//    }
     
+//    override class func awakeFromNib() {
+//
+//        super.awakeFromNib()
+//
+//    }
+//
     func cellModelConfig() {
         guard let model = cellModel else {return}
+        
         lbPickAlias.text = model.pickup.alias ?? ""
         Logger.p("model.pickup.address2- \(model.pickup.address2 ?? "NO data")")
         let comma = (model.pickup.address1 == "") ? "" : ", "
@@ -45,14 +53,37 @@ class HomePickUpLocTableViewCell: UITableViewCell {
         }
     }
     
-    func getDistancevalue() {
-        guard let d = currentLoc else {lbKm.isHidden = true;return}
-        lbKm.isHidden = false
-        guard let lat = cellModel?.pickup.latitude , let long = cellModel?.pickup.longitude else {return}
-        let distance = getDistance(coord1: (lat: d.coordinate.latitude, long: d.coordinate.longitude), coord2: (lat: lat, long: long)).toDecimalsStr(2)
-        lbKm.text = distance + "km"
-    }
-
+//    func getDistancevalue() {
+//        guard let d = currentLoc else {lbKm.isHidden = true;return}
+//        lbKm.isHidden = false
+//        guard let lat = cellModel?.pickup.latitude , let long = cellModel?.pickup.longitude else {return}
+//        let distance = getDistance(coord1: (lat: d.coordinate.latitude, long: d.coordinate.longitude), coord2: (lat: lat, long: long)).toDecimalsStr(2)
+//        lbKm.text = distance + "km"
+//    }
+    
+//    override func layoutIfNeeded() {
+//        super.layoutIfNeeded()
+//        clipsToBounds = false
+//        contentView.clipsToBounds = false
+//    }
+//
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//      //  contentView.clipsToBounds = true
+//        clipsToBounds = false
+//        contentView.clipsToBounds = false
+//    }
+//
+//
+//    override func prepareForReuse() {
+//      //  contentView.clipsToBounds = true
+//        clipsToBounds = false
+//        contentView.clipsToBounds = false
+//        lbPickAlias.text = ""
+//        lbAddress.text = ""
+//        lbCity.text = ""
+//        lbKm.text = ""
+//    }
     
 
 }

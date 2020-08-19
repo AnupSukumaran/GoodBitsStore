@@ -11,7 +11,7 @@ import SASLoaderPod
 
 class Const {
     static let loader: (UIViewController) -> (LoaderView) = { (vc) in
-        return LoaderView(callOn: vc, type: ., color: .black, padding: 18)
+        return LoaderView(callOn: vc, type: .ballSpinFadeLoader, color: .black, padding: 18)
     }
     
 }
