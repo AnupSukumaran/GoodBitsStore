@@ -28,13 +28,16 @@ class GoodBitsStoreTests: XCTestCase {
         
         XCTAssertEqual(distance, 1.452622540522926)
     }
-
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testDecimalpoints() {
+        let val = 1001.56789.toDecimalsStr(2)
+        XCTAssertEqual(val, "1001.57")
     }
+    
+    func testMeterToKm() {
+        let val = 2568.meterToKm()
+        XCTAssertEqual(val, 2.568)
+    }
+
 
 }
