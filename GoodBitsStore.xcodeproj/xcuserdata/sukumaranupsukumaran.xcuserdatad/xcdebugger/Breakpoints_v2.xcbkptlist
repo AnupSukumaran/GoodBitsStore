@@ -14,10 +14,10 @@
             filePath = "GoodBitsStore/ViewModels/HomePickupLocViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "refreshData()"
-            landmarkType = "7">
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "HomePickupLocViewModel"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,9 +30,9 @@
             filePath = "GoodBitsStore/ViewModels/HomePickupLocViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "setUpRefreshController()"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "init(loader:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

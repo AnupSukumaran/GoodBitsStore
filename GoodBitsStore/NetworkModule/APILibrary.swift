@@ -32,6 +32,7 @@ extension APILibrary {
     ///   - comp: an escaping handler at execute upon API response as type Results
     public func apiPickupLocations(filterId: String, comp: @escaping (Results<ModelResponse>) -> ()) {
         let params: OJSON = [.kfilterShop_id: filterId]
+        
         let req = APILib.makeRequest(method: .get, params: params, withHeaders: [contentType], apiComponents: apiComponent, withPathExtension: .pPickupLocations)
 
         dataSetter(req, comp: comp)

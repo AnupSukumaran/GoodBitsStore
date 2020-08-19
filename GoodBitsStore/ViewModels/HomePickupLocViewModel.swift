@@ -22,7 +22,7 @@ class HomePickupLocViewModel: NSObject {
 
     let refreshControl = UIRefreshControl()
     var loader: LoaderView!
-    var locHandler: (() -> ())?
+    var locHandler: ((_ success: Bool) -> ())?
     var settingHandler: (() -> ())? = {
         
         UIAlertController.removeSASSuperAlert()
@@ -30,10 +30,17 @@ class HomePickupLocViewModel: NSObject {
 //        UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
     }
     
+    var cancelHandler: (() -> ())?
+    
     override init() {}
     
     init(loader: LoaderView) {
         self.loader = loader
+        super.init()
+        self.cancelHandler = {
+            UIAlertController.removeSASSuperAlert()
+            self.locHandler?(false)
+        }
         
     }
     
@@ -68,7 +75,7 @@ extension HomePickupLocViewModel {
         
       
         if CLLocationManager.authorizationStatus() == .denied {
-            UIAlertController.showSuperAlertView(title: "Settings", message: "Allow location from settings", actionTitles: ["OK", "Cancel"], actions: [settingHandler, UIAlertController.removeSASSuperAlert])
+            UIAlertController.showSuperAlertView(title: "Settings", message: "Allow location from settings", actionTitles: ["OK", "Cancel"], actions: [settingHandler, cancelHandler])
         }
         
         
@@ -77,7 +84,7 @@ extension HomePickupLocViewModel {
             
             Logger.p("self.locHandler?() = \(self.locHandler)")
             
-            self.locHandler?()
+            self.locHandler?(startLocating)
             
             guard startLocating else {
                 currentLoc = nil
@@ -178,14 +185,16 @@ extension HomePickupLocViewModel: CLLocationManagerDelegate {
         
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
+            
             checkUserAutorizedLocation(startLocating: true)
+            
         case .notDetermined:
             
             break
             
         case .denied:
             
-            break
+            self.locHandler?(false)
             
         case.restricted:
             

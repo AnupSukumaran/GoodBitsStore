@@ -56,10 +56,12 @@ extension HomePickUpLocViewController {
             vc.locListView.reloadData()
         }
         
-        viewModel?.locHandler = { [weak self] in
+        viewModel?.locHandler = { [weak self] isEnabled in
         guard let vc = self else {return}
-            let btnImage = vc.locationBtn.isSelected ? UIImage(named: "locOff") : UIImage(named: "locOn")
+            
+            let btnImage = isEnabled ? UIImage(named: "locOff") : UIImage(named: "locOn")
             vc.locationBtn.setImage(btnImage, for: .normal)
+            vc.locationBtn.isSelected = isEnabled
         }
        
     }
