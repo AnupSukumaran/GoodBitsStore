@@ -38,6 +38,9 @@ class HomePickUpLocViewController: UIViewController {
     
     
     @IBAction func locationBtnAction(_ sender: UIButton) {
+        
+        
+        
         locationBtn.isSelected = !locationBtn.isSelected
         viewModel?.checkUserAutorizedLocation(startLocating: locationBtn.isSelected)
     }
