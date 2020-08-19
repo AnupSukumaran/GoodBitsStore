@@ -38,10 +38,8 @@ class HomePickUpLocViewController: UIViewController {
     
     
     @IBAction func locationBtnAction(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-        let btnImage = sender.isSelected ? UIImage(named: "locOff") : UIImage(named: "locOn")
-        locationBtn.setImage(btnImage, for: .normal)
-        viewModel?.checkUserAutorizedLocation(startLocating: sender.isSelected)
+        locationBtn.isSelected = !locationBtn.isSelected
+        viewModel?.checkUserAutorizedLocation(startLocating: locationBtn.isSelected)
     }
     
 }
@@ -53,6 +51,12 @@ extension HomePickUpLocViewController {
         viewModel?.tableReloadHandler = { [weak self] in
             guard let vc = self else {return}
             vc.locListView.reloadData()
+        }
+        
+        viewModel?.locHandler = { [weak self] in
+        guard let vc = self else {return}
+            let btnImage = vc.locationBtn.isSelected ? UIImage(named: "locOff") : UIImage(named: "locOn")
+            vc.locationBtn.setImage(btnImage, for: .normal)
         }
        
     }

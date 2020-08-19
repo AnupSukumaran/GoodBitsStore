@@ -22,11 +22,19 @@ class HomePickupLocViewModel: NSObject {
 
     let refreshControl = UIRefreshControl()
     var loader: LoaderView!
+    var locHandler: (() -> ())?
+    var settingHandler: (() -> ())? = {
+        
+        UIAlertController.removeSASSuperAlert()
+        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+//        UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+    }
     
     override init() {}
     
     init(loader: LoaderView) {
         self.loader = loader
+        
     }
     
 }
@@ -51,14 +59,17 @@ extension HomePickupLocViewModel {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
     }
     
     /// This funciton stops and starts updating locations as the use press the location button and also sorts the distance calculated from the current location receieved in assending order. and update the table by calling the tableReloadHandler
     /// - Parameter startLocating: This value is received from the button action to enable user to access the current location.
     func checkUserAutorizedLocation(startLocating: Bool) {
+    
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
         CLLocationManager.authorizationStatus() == .authorizedAlways) {
             
+            self.locHandler?()
             guard startLocating else {
                 currentLoc = nil
                 locationManager.stopUpdatingLocation()
@@ -90,6 +101,7 @@ extension HomePickupLocViewModel {
             self.tableReloadHandler?()
             
         } else {
+            
             requestLocationAutorization()
         }
     }
@@ -153,13 +165,42 @@ extension HomePickupLocViewModel: UITableViewDelegate, UITableViewDataSource {
 
 extension HomePickupLocViewModel: CLLocationManagerDelegate {
     
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("error::: \(error)")
+        locationManager.stopUpdatingLocation()
+        
+        UIAlertController.showSuperAlertView(title: "Settings", message: "Allow location from settings", actionTitles: ["Ok", "Cancel"], actions: [settingHandler, UIAlertController.removeSASSuperAlert])
+        
+//        let alert = UIAlertController(title: "Settings", message: "Allow location from settings", preferredStyle: UIAlertControllerStyle.Alert)
+//        self.presentViewController(alert, animated: true, completion: nil)
+//        alert.addAction(UIAlertAction(title: TextMessages().callAlertTitle, style: .Default, handler: { action in
+//            switch action.style{
+//            case .Default: UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+//            case .Cancel: print("cancel")
+//            case .Destructive: print("destructive")
+//            }
+//        }))
+    }
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
             checkUserAutorizedLocation(startLocating: true)
-        
+        case .notDetermined:
+            
+            break
+            
+        case .denied:
+            
+            break
+            
+        case.restricted:
+            
+            break
+            
         default:
+            
             break
         }
     }
