@@ -26,13 +26,9 @@ class GoodBitsStoreTests: XCTestCase {
     func testDistanceBtwCoords() {
         let distance = getDistance(coord1: (lat: 9.981391906738281, long: 76.30953697494819), coord2: (lat: 9.992127, long: 76.301905))
         
-        XCTAssertEqual(distance, 1452.622540522926)
+        XCTAssertEqual(distance, 1.452622540522926)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
