@@ -73,16 +73,14 @@ extension HomePickupLocViewModel {
     /// - Parameter startLocating: This value is received from the button action to enable user to access the current location.
     func checkUserAutorizedLocation(startLocating: Bool) {
         
-      
-        if CLLocationManager.authorizationStatus() == .denied {
-            UIAlertController.showSuperAlertView(title: "Settings", message: "Allow location from settings", actionTitles: ["OK", "Cancel"], actions: [settingHandler, cancelHandler])
+        guard CLLocationManager.authorizationStatus() != .denied else {
+             UIAlertController.showSuperAlertView(title: "Settings", message: "Allow location from settings", actionTitles: ["OK", "Cancel"], actions: [settingHandler, cancelHandler])
+            return
         }
-        
-        
+
+                
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
         CLLocationManager.authorizationStatus() == .authorizedAlways) {
-            
-            Logger.p("self.locHandler?() = \(self.locHandler)")
             
             self.locHandler?(startLocating)
             
@@ -95,21 +93,8 @@ extension HomePickupLocViewModel {
         
             locationManager.startUpdatingLocation()
             currentLoc = locationManager.location
-            let currLat = currentLoc?.coordinate.latitude ?? 0.0
-            let currLong = currentLoc?.coordinate.longitude ?? 0.0
             
-            let newPickUp = pickUps.map { (pickUp) -> Pickup in
-                var newPickUp = pickUp
-                if let lat = newPickUp.latitude , let long = newPickUp.longitude {
-                    let distance = getDistance(coord1: (lat: currLat, long: currLong), coord2: (lat: lat, long: long))
-                    newPickUp.distance = distance
-                }
-                
-
-               return newPickUp
-            }
-            
-            sortedDistancePickUps = newPickUp.sorted { (x, y) -> Bool in
+            sortedDistancePickUps = newPickUpModelWithDistanceAdded().sorted { (x, y) -> Bool in
                 guard let xd = x.distance, let yd = y.distance else {return false}
                 return xd < yd
             }
@@ -121,6 +106,25 @@ extension HomePickupLocViewModel {
             requestLocationAutorization()
         }
     }
+    
+    
+    /// Creates a new PickUp Model array with distance values included
+    /// - Returns: Array of PickUp model with distance value included each
+    func newPickUpModelWithDistanceAdded() -> [Pickup] {
+        let currLat = currentLoc?.coordinate.latitude ?? 0.0
+        let currLong = currentLoc?.coordinate.longitude ?? 0.0
+        return pickUps.map { (pickUp) -> Pickup in
+            var newPickUp = pickUp
+            if let lat = newPickUp.latitude , let long = newPickUp.longitude {
+                let distance = getDistance(coord1: (lat: currLat, long: currLong), coord2: (lat: lat, long: long))
+                newPickUp.distance = distance
+            }
+    
+           return newPickUp
+        }
+    }
+    
+    
     
     
     /// API Call
