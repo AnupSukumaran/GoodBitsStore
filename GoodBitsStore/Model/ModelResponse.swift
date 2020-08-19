@@ -17,9 +17,5 @@ public class ModelResponse: NSObject, Codable {
         super.init()
         pickupLocationsModel = try? JSONDecoder().decode(PickupLocationsModel.self, from: data)
     }
-    
-    
 
-    
-   
 }

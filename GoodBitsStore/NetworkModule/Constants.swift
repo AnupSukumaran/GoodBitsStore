@@ -17,6 +17,7 @@ class Const {
 }
 
 extension String {
+    
     static var appName = "GoodBits Store"
     
     static var scheme = "https"

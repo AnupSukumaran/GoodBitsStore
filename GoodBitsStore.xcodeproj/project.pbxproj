@@ -221,9 +221,9 @@
 		18502C7824EAD3A2001385BB /* GoodBitsStoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				1866312524EC2006005F83B5 /* APILibraryTests.swift */,
 				18502C7924EAD3A2001385BB /* GoodBitsStoreTests.swift */,
 				18502C7B24EAD3A2001385BB /* Info.plist */,
-				1866312524EC2006005F83B5 /* APILibraryTests.swift */,
 			);
 			path = GoodBitsStoreTests;
 			sourceTree = "<group>";
@@ -760,7 +760,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RDRMVW96A6;
+				DEVELOPMENT_TEAM = 3P3J8AFD59;
 				INFOPLIST_FILE = GoodBitsStore/ConfigFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -780,7 +780,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RDRMVW96A6;
+				DEVELOPMENT_TEAM = 3P3J8AFD59;
 				INFOPLIST_FILE = GoodBitsStore/ConfigFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
