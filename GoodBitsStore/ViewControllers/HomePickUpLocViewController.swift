@@ -53,7 +53,6 @@ extension HomePickUpLocViewController {
     func setHandlers() {
         viewModel?.tableReloadHandler = { [weak self] in
             guard let vc = self else {return}
-            vc.locListView.isHidden = (vc.viewModel?.pickupLocationsModel?.pickup?.count ?? 0) == 0
             vc.locListView.reloadData()
         }
         
@@ -66,8 +65,7 @@ extension HomePickUpLocViewController {
         }
         
         viewModel?.errorHandler = {  [weak self] in
-            guard let vc = self else {return}
-            vc.locListView.isHidden = true
+            guard let _ = self else {return}
         }
        
     }
